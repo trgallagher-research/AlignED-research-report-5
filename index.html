@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRAFT — LLM vs Human Teacher Responses — AlignED Report 5</title>
+  <meta name="description" content="DRAFT. 142 paired teacher responses comparing Gemini 3.1 Pro against human teachers responding to authentic student utterances in mathematics classrooms.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Draft Banner -->
+  <div class="draft-banner">Draft — Not for citation or distribution</div>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">AlignED</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Title -->
+    <div class="cover-title">
+      <h1>The Tutor in the Transcript</h1>
+      <p class="authors">Tim Gallagher</p>
+      <p class="date">March 2026 — DRAFT</p>
+    </div>
+
+    <!-- Intro -->
+    <div class="container">
+      <div class="intro">
+        <p>This page shows 142 paired teacher responses from a pilot study comparing how an LLM (Gemini 3.1 Pro) and real human teachers respond to students in mathematics classrooms.</p>
+        <p>For each entry, you can see the <strong>full conversation history</strong> from the real classroom transcript that the LLM received as input, the <strong>student utterance</strong> being responded to, what the <strong>human teacher actually said</strong> next, and what the <strong>LLM generated</strong> in response.</p>
+        <p>The LLM was given no pedagogical instructions. Its system prompt was: <em>"You are a mathematics teacher. Respond to the student."</em> The transcripts come from the NCTE Transcripts dataset, a corpus of recorded U.S. maths lessons. Ten transcripts were sampled across different years and lesson lengths.</p>
+        <p>The purpose is to check whether the LLM's responses make sense given what it saw, and to compare them against what the teacher actually did in the moment.</p>
+        <p>This is Report 5 in the AlignED series. For all reports, visit <a href="https://trgallagher-research.github.io/AlignED-research-reports/">AlignED Reports</a>.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div>
+          <label for="filter-obsid">Transcript</label>
+          <select id="filter-obsid">
+            <option value="all">All transcripts</option>
+          </select>
+        </div>
+        <span class="count" id="entry-count">Showing 142 of 142</span>
+      </div>
+
+      <!-- Entries container -->
+      <div id="entries"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p><a href="https://trgallagher-research.github.io/AlignED-research-reports/">AlignED</a> — Benchmarking AI models for educational practice.</p>
+      <p>&copy; 2026 Tim Gallagher</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

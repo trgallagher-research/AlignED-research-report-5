@@ -1,0 +1,318 @@
+/* AlignED Report 5 — DRAFT
+ * Warm parchment palette. Inter headings + Georgia body text.
+ * Identical design system to Reports 1–4.
+ */
+
+/* -- Custom Properties -- */
+:root {
+  --background: #F4F1EB;
+  --surface: #FEFDFB;
+  --text: #2D3748;
+  --text-muted: #6B7280;
+  --primary: #3B6B9A;
+  --secondary: #7096B8;
+  --accent: #B67D5C;
+  --border: #E8E4DF;
+  --dark-header: #1A2B3C;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', Times, ui-serif, serif;
+  --font-mono: Consolas, Monaco, 'Courier New', monospace;
+
+  --max-width: 960px;
+  --wide-width: 1100px;
+}
+
+/* -- Reset -- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* -- Typography -- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--primary);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.625rem; margin-top: 2.5rem; }
+h3 { font-size: 1.25rem; margin-top: 2rem; }
+p { margin-bottom: 1rem; }
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--primary); text-decoration: underline; }
+
+/* -- Layout -- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.container-wide {
+  max-width: var(--wide-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* -- Header -- */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .container {
+  max-width: var(--wide-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+.logo:hover { text-decoration: none; color: var(--primary); }
+
+/* -- Draft Banner -- */
+.draft-banner {
+  background: #FEF3C7;
+  border-bottom: 2px solid #F59E0B;
+  padding: 0.6rem 0;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #92400E;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* -- Cover -- */
+.cover-title {
+  text-align: center;
+  padding: 5rem 0 2rem;
+}
+
+.cover-title h1 {
+  font-size: 2.5rem;
+  max-width: 750px;
+  margin: 0 auto 1rem;
+  line-height: 1.2;
+}
+
+.cover-title .authors {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.cover-title .date {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* -- Intro -- */
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* -- Controls -- */
+.controls {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.controls label {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.controls select {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--background);
+  color: var(--text);
+}
+
+.controls .count {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+/* -- Entry Cards -- */
+.entry {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.entry-header {
+  background: var(--dark-header);
+  color: white;
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.entry-header .entry-num {
+  opacity: 0.6;
+}
+
+.entry-section {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.entry-section:last-child { border-bottom: none; }
+
+.section-label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+/* Conversation history */
+.history-toggle {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: none;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.history-toggle:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.history-content {
+  display: none;
+  margin-top: 0.75rem;
+  white-space: pre-wrap;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.5;
+  max-height: 500px;
+  overflow-y: auto;
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 4px;
+}
+.history-content.visible { display: block; }
+
+/* Response boxes */
+.response-box {
+  padding: 0.85rem 1rem;
+  border-radius: 4px;
+  line-height: 1.6;
+}
+
+.student-box {
+  background: #e8f4fd;
+  border-left: 4px solid #2196F3;
+}
+
+.human-box {
+  background: #e8f5e9;
+  border-left: 4px solid #4CAF50;
+}
+
+.llm-box {
+  background: #fff3e0;
+  border-left: 4px solid #FF9800;
+}
+
+/* -- Footer -- */
+footer {
+  background: var(--dark-header);
+  color: white;
+  padding: 2rem 0;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+footer p {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.25rem;
+}
+
+footer a {
+  color: rgba(255,255,255,0.7);
+}
+footer a:hover { color: white; }
+
+/* -- Responsive -- */
+@media (max-width: 768px) {
+  .cover-title h1 { font-size: 1.75rem; }
+  .cover-title { padding: 3rem 0 1.5rem; }
+  .controls { flex-direction: column; align-items: stretch; gap: 0.75rem; }
+  .controls .count { margin-left: 0; }
+}
+
+@media (max-width: 480px) {
+  .container, .container-wide { padding: 0 1rem; }
+  h1 { font-size: 1.5rem; }
+}
