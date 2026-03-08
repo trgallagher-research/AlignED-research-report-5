@@ -283,6 +283,97 @@ header .container {
   border-left: 4px solid #FF9800;
 }
 
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.tag-indirect {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.tag-no-response {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.tag-inaudible {
+  background: #E0E7FF;
+  color: #3730A3;
+}
+
+.tag-words {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+.tag-context {
+  background: #F3F4F6;
+  color: #4B5563;
+}
+
+/* Match warning on indirect pairs */
+.match-warning {
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: #92400E;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* Intro list and table */
+.intro ul {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.intro li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.intro table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.intro th, .intro td {
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.intro th {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  background: var(--background);
+}
+
+.intro td:first-child {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
 /* -- Footer -- */
 footer {
   background: var(--dark-header);

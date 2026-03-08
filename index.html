@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DRAFT — LLM vs Human Teacher Responses — AlignED Report 5</title>
-  <meta name="description" content="DRAFT. 142 paired teacher responses comparing Gemini 3.1 Pro against human teachers responding to authentic student utterances in mathematics classrooms.">
+  <meta name="description" content="DRAFT. 1,165 paired teacher responses comparing GPT-5 Mini against human teachers responding to authentic student utterances in mathematics classrooms.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,10 +32,35 @@
     <!-- Intro -->
     <div class="container">
       <div class="intro">
-        <p>This page shows 142 paired teacher responses from a pilot study comparing how an LLM (Gemini 3.1 Pro) and real human teachers respond to students in mathematics classrooms.</p>
-        <p>For each entry, you can see the <strong>full conversation history</strong> from the real classroom transcript that the LLM received as input, the <strong>student utterance</strong> being responded to, what the <strong>human teacher actually said</strong> next, and what the <strong>LLM generated</strong> in response.</p>
-        <p>The LLM was given no pedagogical instructions. Its system prompt was: <em>"You are a mathematics teacher. Respond to the student."</em> The transcripts come from the NCTE Transcripts dataset, a corpus of recorded U.S. maths lessons. Ten transcripts were sampled across different years and lesson lengths.</p>
-        <p>The purpose is to check whether the LLM's responses make sense given what it saw, and to compare them against what the teacher actually did in the moment.</p>
+        <p>This page shows 1,165 paired teacher responses comparing how an LLM (GPT-5 Mini) and real human teachers respond to students in mathematics classrooms. Ten transcripts were sampled from the NCTE Transcripts dataset, a corpus of recorded U.S. maths lessons, across different data collection years and lesson lengths.</p>
+
+        <p>For each entry, you can see the <strong>full conversation history</strong> the LLM received as input, the <strong>student utterance</strong> being responded to, what the <strong>human teacher actually said</strong> next, and what the <strong>LLM generated</strong> in response.</p>
+
+        <h3>What changed from the initial run</h3>
+
+        <p>An earlier pilot used Gemini 3.1 Pro on 142 student turns with a minimal prompt (<em>"You are a mathematics teacher. Respond to the student."</em>) and a 10-word minimum filter on student utterances. Methodological review identified several problems with that approach:</p>
+
+        <ul>
+          <li><strong>The word filter excluded pedagogically important turns.</strong> A student saying "I don't understand" (3 words) was filtered out, even though the teacher's response to that utterance is exactly the kind of moment this study should examine. The filter has been removed. All student turns are now included.</li>
+          <li><strong>The prompt framed the task as one-to-one tutoring.</strong> "Respond to the student" (singular) made it impossible for the model to redirect to another student, address the class, or use any multi-party discourse moves. The updated prompt tells the model it is in a classroom with multiple students and may take any action a teacher might take.</li>
+          <li><strong>Human response matching was not validated.</strong> When multiple students speak consecutively before the teacher responds, the pipeline matched all of them to the same teacher response — but the teacher was only responding to one. Each turn is now tagged as a <em>direct</em> match (student turn immediately followed by teacher turn) or <em>indirect</em> match (other students spoke in between), so the comparison can be filtered appropriately.</li>
+        </ul>
+
+        <h3>Current design</h3>
+
+        <table>
+          <tr><th>Parameter</th><th>Value</th></tr>
+          <tr><td>Model</td><td>GPT-5 Mini (OpenAI Batch API)</td></tr>
+          <tr><td>System prompt</td><td><em>"You are a mathematics teacher in a classroom with multiple students. Respond as you would in a real lesson. You may address the student who spoke, redirect to another student, address the whole class, or take any other action a teacher might take."</em></td></tr>
+          <tr><td>Instruction</td><td><em>"Write only your next teacher response."</em></td></tr>
+          <tr><td>Temperature</td><td>1.0</td></tr>
+          <tr><td>Student turns</td><td>1,165 (all student turns, no word filter)</td></tr>
+          <tr><td>Transcripts</td><td>10 (sampled across years and lengths)</td></tr>
+          <tr><td>Direct matches</td><td>1,092 (93.7%)</td></tr>
+          <tr><td>Indirect matches</td><td>72 (6.2%)</td></tr>
+          <tr><td>Turns with [Inaudible]</td><td>163 (14.0%)</td></tr>
+        </table>
+
         <p>This is Report 5 in the AlignED series. For all reports, visit <a href="https://trgallagher-research.github.io/AlignED-research-reports/">AlignED Reports</a>.</p>
       </div>
 
@@ -47,7 +72,24 @@
             <option value="all">All transcripts</option>
           </select>
         </div>
-        <span class="count" id="entry-count">Showing 142 of 142</span>
+        <div>
+          <label for="filter-match">Match type</label>
+          <select id="filter-match">
+            <option value="all">All</option>
+            <option value="direct">Direct only</option>
+            <option value="indirect">Indirect only</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-words">Student words</label>
+          <select id="filter-words">
+            <option value="all">All</option>
+            <option value="1-2">1-2 words</option>
+            <option value="3-9">3-9 words</option>
+            <option value="10+">10+ words</option>
+          </select>
+        </div>
+        <span class="count" id="entry-count">Showing 1165 of 1165</span>
       </div>
 
       <!-- Entries container -->
