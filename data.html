@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Browser — AlignED Report 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="draft-banner">DRAFT — Pre-report results</div>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">AlignED</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="data.html" class="active">Data Browser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Data Browser</h1>
+        <p class="subtitle">Browse all paired responses. Filter by transcript, match quality, word count, or model.</p>
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <div>
+          <label for="filter-obsid">Transcript</label>
+          <select id="filter-obsid">
+            <option value="all">All transcripts</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-match">Match type</label>
+          <select id="filter-match">
+            <option value="all">All</option>
+            <option value="direct">Direct only</option>
+            <option value="indirect">Indirect only</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-words">Student words</label>
+          <select id="filter-words">
+            <option value="all">All</option>
+            <option value="1-2">1-2 words</option>
+            <option value="3-9">3-9 words</option>
+            <option value="10+">10+ words</option>
+          </select>
+        </div>
+        <div>
+          <label for="filter-gemini">Gemini comparison</label>
+          <select id="filter-gemini">
+            <option value="all">All turns</option>
+            <option value="yes">With Gemini (142)</option>
+            <option value="no">GPT-5 only</option>
+          </select>
+        </div>
+        <span class="count" id="entry-count"></span>
+      </div>
+
+      <!-- Summary bar -->
+      <div id="summary-bar" class="summary-bar"></div>
+
+      <!-- Entries container -->
+      <div id="entries"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="https://trgallagher-research.github.io/AlignED-research-reports/">AlignED</a> — Benchmarking AI models for educational practice.</p>
+      <p>&copy; 2026 Tim Gallagher</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+</body>
+</html>
