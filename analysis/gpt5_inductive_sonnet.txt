@@ -1,0 +1,291 @@
+INDUCTIVE QUALITATIVE CODING: GPT-5 Mini vs Human Teachers
+Coder: Claude Sonnet 4.6 (extended thinking)
+Sample: 60 pairs, stratified by OBSID and word count
+Short=20, Medium=20, Long=20
+Direct matches=56, Indirect matches=4
+Tokens: input=19528, output=9414
+================================================================================
+
+# Qualitative Analysis of Human vs. LLM Teacher Responses
+
+---
+
+## SECTION A: EMERGENT THEMES IN HUMAN TEACHER RESPONSES
+
+### Theme 1: Strategic Minimalism — The Deliberate Withholding of Information
+
+Human teachers frequently respond with a single word, a single question, or a brief acknowledgment, and then stop. This is not laziness or incompleteness; it is a disciplined pedagogical choice to keep cognitive work with the student rather than transferring it back to the teacher.
+
+- **Pair 10**: Student says "I did 20 times 80." Human says "Yeah?" The monosyllabic response invites the student to continue without cueing them about whether they are right or wrong.
+- **Pair 11**: Student gives two correct partial products. Human says "You got it." Nothing more. The student is affirmed but not taken over by teacher explanation.
+- **Pair 18**: Student gives a correct answer. Human says "Where did you get 60 from?" Rather than validating and explaining, the teacher probes the reasoning — the answer is less interesting than its derivation.
+- **Pair 1**: Student says "No." Human responds with only "Which one starts at the center point?" — a targeted redirect that keeps the student doing the conceptual work.
+
+The implication is that human teachers understand *withholding* as a generative act. The LLM never withholds.
+
+---
+
+### Theme 2: Participation Management as the Primary Orchestral Function
+
+A recurring pattern in human responses is the management of *who speaks*, not *what is said*. Teachers redirect constantly — not to provide content but to distribute cognitive labour across students and to maintain the social structure of the lesson.
+
+- **Pair 13**: After a correct answer ("Obtuse"), the human does not dwell on it. Instead: "What would I call that one, Student C?" The answer is handed off immediately.
+- **Pair 14**: After "Scalene," the human responds: "Does that make sense? Which one has two sides that are the same length? Student J?" Again, the response is almost entirely a redirect rather than instruction.
+- **Pair 8**: After "Yeah," the human says "Okay. Who can give me another strategy... Here you go my friend. Very good. 6 times 5 equals 30?" The teacher is simultaneously redirecting, affirming a new student physically arriving, and asking a question — three moves in one short turn.
+- **Pairs 25, 29, 35** (indirect matches): The human teacher does not respond to the student who spoke at all. These are not failures; they are choices. The human decided another move was more important at that moment.
+
+This orchestral function — deciding who talks, when, and about what — is one of the most sophisticated and present aspects of human teaching. The LLM treats every student utterance as a prompt requiring a full response.
+
+---
+
+### Theme 3: Classroom Management as Woven Into Instruction, Not Separate From It
+
+Human teachers do not pause instruction to handle management — they fold management into their pedagogical moves seamlessly, and sometimes management *is* the response.
+
+- **Pair 5**: A student's 12-word utterance receives the response: "Speak up. The microphone needs to pick up your voice." This is pure management. The teacher is not engaging with the mathematical content at all; the priority is audibility for the class.
+- **Pair 41**: Student says "That's not my name." Teacher replies: "What should we be doing right now?" This is a de-escalation move that redirects attention to task without confronting the name issue directly.
+- **Pair 46**: Teacher says "You guys are not finished, why are you cleaning up? I said if you are finished..." — tracking multiple students' task completion simultaneously while giving procedural directions.
+- **Pair 39**: "No, you tell him. The product is 80. You're supposed to be telling Student C this." The teacher corrects a student-to-student communication breakdown in a single sentence that simultaneously supplies the missing information.
+
+Management in these classrooms is micro, targeted, and interleaved with instruction. It is responsive to what the teacher sees, not just what they hear.
+
+---
+
+### Theme 4: Socratic Probing — Answering Questions With Questions
+
+A persistent strategy in the human data is responding to student answers (both correct and incorrect) with a question that tests or extends the reasoning, rather than confirming or explaining.
+
+- **Pair 3**: Student says "At the edge of the circle." Human responds: "Kind of sort of — would you say they end at opposite — they end in opposite places. Would you say that?" This is not confirmation; it is gentle recasting and questioning.
+- **Pair 4**: Student says "At the edge of a circle." Human responds: "And where does it end?" — following the partial answer with a further probe.
+- **Pair 54**: Student correctly draws the triangle. Human asks: "Can you tell us why did you put 30 on the top, Student S?" Correct performance is treated as an occasion for reasoning.
+- **Pair 59**: Student asks "Is one third the same as one fourth?" Human does not answer. Instead: "One third is not the same fraction as one fourth. Are you sure this is one half? What do you think of one third? How many columns do we have? One third of 12 would be what?" — a cascade of Socratic questions that lead the student to self-correct.
+- **Pair 53**: Student gives an example instead of a definition. Human says: "You're giving me an example. I don't want an example right now. I want a definition." This is a metacognitive move — the teacher distinguishes between two types of mathematical response and names the distinction.
+
+---
+
+### Theme 5: Temporal and Spatial Groundedness in the Physical Classroom
+
+Human responses are anchored in the material reality of the classroom — the board, the paper, the desks, the microphone, the physical movements of students and teacher.
+
+- **Pair 2**: "I'm going to erase some of my information... I want you to draw a smaller circle... turn your paper over." The entire response is organised around physical actions in sequence.
+- **Pair 31**: "And that's actually what you did. And then we would end up with having four groups of them. Good job. All right, letter D. Who wants to come up..."
+- **Pair 43**: "If you are finished, you need to write down your homework, which is math book page 317... you have to have your fraction bars cleaned up, and your worksheet needs to be finished." The teacher is tracking physical objects in the room.
+- **Pair 26**: "Do you want some help? Okay, you want to phone a friend? Okay." — The teacher is reading a student's uncertainty from their face or body language and offering a social scaffold that exists in this specific classroom culture ("phone a friend" as an established routine).
+
+Human responses presuppose a teacher who can *see* the room.
+
+---
+
+## SECTION B: EMERGENT THEMES IN LLM TEACHER RESPONSES
+
+### Theme 1: Completionism — Every Response Constitutes a Full Teaching Episode
+
+The LLM treats each student utterance as a trigger for a complete instructional sequence: acknowledge → explain → extend → task → check. This structure appears in virtually every response regardless of whether it is appropriate to the moment.
+
+- **Pair 9**: Student says "Add a 0." LLM responds: "Exactly — add a zero. So 70 × 20 = 1,400 (7 × 2 = 14 and we add the two zeros). Now who can tell me the other three boxes: 70 × 6, 5 × 20, and 6 × 5?" A three-word correct answer generates an explanation, a worked example, and three follow-up questions.
+- **Pair 11**: Student correctly gives two partial products. LLM provides the remaining two, does the addition, and asks the class to verify — converting a student success into a full teacher demonstration.
+- **Pair 49**: Student says "Multiplication." LLM gives a full explanation of the triangle fact-family card, then transitions to the next problem with full instructions, then names a student, and ends with a question about word problems. The single word "Multiplication" generates approximately 130 words of response.
+
+This completionism is the LLM's most consistent feature and its most significant departure from human practice.
+
+---
+
+### Theme 2: Bureaucratic Task-Setting — The Bullet-Pointed Instruction List
+
+The LLM habitually generates numbered or bulleted multi-step task instructions at the end of responses, even in situations where a student has simply answered a question correctly.
+
+- **Pair 3**: "Now do this: Make sure your radius is traced in red... Make sure your diameter is a straight green line... Draw an orange chord... Measure with your ruler and write the numbers... Hold your paper up when you're finished... Quick question for Student R..."
+- **Pair 19**: "Now everyone, on your paper write a short explanation... Use this template: State your scale... Show the perimeter calculation... Show the area calculation... Then write one or two sentences..."
+- **Pair 57**: Step 1. Take the first side of your paper. Step 2. Your job: pick three fractions. Step 3. For each rectangle: draw the partition, shade the part, calculate how many of the 60 little squares... Four further sub-steps follow.
+- **Pair 52**: "I'm going to give you 60 seconds to fix the right side of your whiteboards. Use the equation 6 × 5 = 30... write a short word problem that: names what the items are, gives both numbers, asks a clear question, includes the answer and the unit. Two quick examples to model..."
+
+This pattern is so consistent it constitutes a template. The LLM appears to be generating classroom instructions according to a schema: affirmation → concept → steps → exemplar → time check → named student.
+
+---
+
+### Theme 3: Whole-Class Pivots Regardless of Context
+
+Even when responding to a specific student's specific utterance, the LLM almost always pivots to address the whole class, distributes tasks to multiple named students, and launches a class-wide activity. This happens uniformly and without apparent sensitivity to whether such a pivot is warranted.
+
+- **Pair 6**: Student correctly describes a diameter. LLM confirms briefly, then: "Quick check for everyone... While you think, a couple more things to do... Remember that a diameter is a special kind of chord... The fourth part we promised to learn is the circumference... Use your blue marker or crayon... use your ruler to measure... If you finish quickly, I'll show you..."
+- **Pair 13**: Student says "Obtuse." LLM confirms, then: "Good. Now what do we call an angle that is less than 90 degrees? Student K? And if all three angles in a triangle are less than 90 degrees, what would we call that triangle?" Two new questions to a new student about a new topic follow from one word.
+- **Pair 55**: Student says something inaudible. LLM generates a class-wide activity about 5×12 rectangles and equivalent fractions.
+
+The LLM was explicitly instructed that it could redirect or address the class — but it does so reflexively rather than selectively. The human teacher's choice about *when* to pivot is itself a pedagogical judgment that the LLM cannot replicate.
+
+---
+
+### Theme 4: Speculative Contextual Fabrication
+
+In several cases the LLM invents details about the classroom, the task, or previous events that are not in evidence, constructing a plausible but fictional classroom context.
+
+- **Pair 2**: "So if your plate measured about 9 inches across (Student R's plate)..." There is no plate in the transcript. The LLM has invented a classroom artefact.
+- **Pair 3**: "Remember our colors: radius = red, diameter = green, chord = orange." These colour assignments may have been established earlier but are not in the student utterance; the LLM is filling in with plausible but unverifiable classroom history.
+- **Pair 23**: The student asks if the test is tomorrow. The LLM responds with specific test content: "It will be on order of operations: parentheses, exponents... Expect problems like the ones we did today." The human teacher reveals that the test date is actually uncertain — they have not decided. The LLM fabricates a definitive answer.
+- **Pair 7**: "Your four problems are: 46 × 16, 84 × 24, 76 × 32, and 26 × 58." These specific numbers appear later in the transcript (OBSID 769), suggesting the LLM may have access to them, but the student utterance is simply "Yes" — the LLM is inventing task specificity.
+
+---
+
+### Theme 5: Affect Without Authenticity — Formulaic Praise and Social Mirroring
+
+LLM responses consistently open with an affirmative phrase ("Exactly," "Yes — good," "Nice work," "Nice job"), but this praise is structurally formulaic rather than responsive to anything specific the student said.
+
+- **Pair 9**: "Exactly — add a zero." Student said "Add a 0." The LLM paraphrases and approves.
+- **Pair 26**: "Nice job, Student R — thank you. Let's say them together..." Student said "27" (which was part of a count-by-nines sequence and may have been uncertain — the human teacher offered "phone a friend"). The LLM treats it as complete success.
+- **Pair 50**: "No — nice try, Student C." — The LLM has decided the student is wrong (student said "13" for 3 times as many as 4) and delivers the correction with formulaic softening. The human teacher simply says "Student C—" which is a redirect, not necessarily a correction. The LLM has made an inference and converted it into a pedagogical act.
+- **Pair 54**: "Yes — exactly, nice work." The student recited four number facts. The LLM affirms all of them, then moves on. The human teacher asked *why* — probing the reasoning behind the correct answer.
+
+---
+
+## SECTION C: KEY DIFFERENCES
+
+### C1: Response Length and Information Density
+
+This is the most visible difference. Human responses in this dataset are almost uniformly short — often under 20 words, frequently under 10. LLM responses are almost uniformly long — typically 100–250 words. This is not merely stylistic. Length encodes an assumption about the purpose of a response: for the LLM, a response is an opportunity to teach; for the human teacher, a response is a move in an ongoing social game.
+
+- **Pair 10**: Human = 1 word ("Yeah?"). LLM ≈ 60 words.
+- **Pair 11**: Human = 3 words ("You got it."). LLM ≈ 70 words.
+- **Pair 5**: Human = 9 words (a management directive). LLM ≈ 85 words of mathematical instruction.
+- **Pair 44**: Human = 9 words ("Separate them. What does the bottom number show us, Student R?"). LLM ≈ 80 words.
+
+The human's brevity is not a deficiency. It is calibrated to the interactional moment. An 80-word response to "Yes" is categorically wrong as classroom discourse, regardless of the mathematical quality of those 80 words.
+
+---
+
+### C2: The Treatment of Indirect Matches
+
+Five pairs are labelled "indirect match" — the human teacher's actual next utterance was directed elsewhere, meaning the human chose not to respond to that student at all. The LLM responds to the student in every case.
+
+- **Pair 21**: Student says "I think four." Human redirects to a question about mixing tangram pieces — the answer "four" is neither affirmed nor challenged; the teacher moves the lesson forward. LLM gives a 170-word response to "I think four."
+- **Pair 25**: Student says "Eight." Human says "Okay, she wants to do eights, nines, okay, nine" — addressing the whole class about choices, not the student. LLM asks "Student R, do you want to show us skip-counting by sevens or by eights?" and launches a demonstration.
+- **Pair 29**: Student says "I know how to do it but I don't know how to explain it." Human says "All right, time is up. Now find your elbow." The pedagogically significant response *ignores* this interesting metacognitive statement because the lesson clock has run. LLM provides scaffolding for the individual student's difficulty.
+- **Pair 35**: Student gives a partial definition. Human redirects to the glossary ("let's look at the definition"). LLM provides the complete written rule.
+
+In indirect-match cases, the human teacher's choice NOT to respond is itself a pedagogical act — prioritising pacing, group transitions, or other students. The LLM cannot replicate non-response because it is structurally obligated to generate output.
+
+---
+
+### C3: Probing vs. Resolving
+
+When a student produces a correct answer, the human teacher frequently uses it as an occasion for *further* probing rather than affirmation and closure. The LLM consistently moves toward resolution.
+
+- **Pair 18**: Student says correctly "X should be 60 so 120 plus 60 equals 180." Human asks "Where did you get 60 from?" LLM affirms and says "Show it like this on your paper: 95 + 25 + x = 180..." — providing the complete worked form.
+- **Pair 54**: Student correctly gives all four fact-family equations. Human asks "Can you tell us why did you put 30 on the top?" LLM says "Yes — exactly, nice work. Now everyone write those four on your whiteboard."
+- **Pair 60**: A student is in the middle of discovering something about multiplying numerator and denominator. Human says "So he actually is doing something we have not mentioned before. What do we call this number?" — dramatising the discovery and inviting the class to name it. LLM explains the concept fully: "when we multiply the numerator and denominator of a fraction by the same number, we make an equivalent fraction."
+
+In pair 60, the human teacher's restraint is remarkable: a student has spontaneously applied an unmotivated procedure and the teacher recognises this as a teaching moment requiring class attention and naming, not explanation. The LLM kills the discovery by explaining it.
+
+---
+
+### C4: Student-to-Student vs. Teacher-to-Student Orchestration
+
+Several human responses are specifically designed to redirect communication between students, not from teacher to student or teacher to class.
+
+- **Pair 39**: "No, you tell him. The product is 80. You're supposed to be telling Student C this." The teacher explicitly refuses to be the information relay and forces the student to communicate directly with their peer. LLM becomes the relay.
+- **Pair 8**: "Okay. Who can give me another strategy for that 26 and 75? Here you go my friend." The teacher is physically directing attention — the "here you go" suggests handing something (perhaps the marker) to a student. LLM: "Who can tell me each product and then add them to find 26×75? Student L?" — a question, not a physical relinquishment of authority.
+
+---
+
+### C5: Metacognitive Naming vs. Implicit Demonstration
+
+Human teachers in this dataset explicitly name the *type* of thing a student is doing — distinguishing example from definition, distinguishing the attempt from the success.
+
+- **Pair 53**: "You're giving me an example. I don't want an example right now. I want a definition. Think about the example you gave me and how can we say that or write that as a definition for an equation?" This is rare and important — the teacher is teaching students how to think about mathematical knowledge, not just mathematical content. LLM provides a definition without flagging the distinction between types of mathematical response.
+- **Pair 60**: "So he actually is doing something we have not mentioned before." — the teacher frames the student's action as a discovery, a novel event in the lesson's narrative. LLM explains the procedure as though it were already established knowledge.
+
+---
+
+### C6: The Treatment of Off-Task or Irrelevant Student Talk
+
+- **Pair 41**: Student says "That's not my name. You called me Student M. Student M. I can't pronounce it." This is an interpersonal/identity issue. Human responds: "What should we be doing right now?" — a single redirecting question that de-escalates without engaging the complaint. LLM generates a 170-word response with breathing exercises, a complete task list, named roles, rotation instructions, and an apology at the bottom: "If I called you the wrong name earlier, I'm sorry — please tell me quietly after class." The LLM's response is socially well-intentioned but pedagogically incoherent — it does not know *what to do* with this type of student talk.
+- **Pair 48**: Student asks about making a volcano from a flowerpot. Human says "That's a good idea, isn't it?" — a brief, warm non-engagement that neither validates the distraction nor confronts it. LLM gives detailed safety instructions for volcano construction including materials, outdoor requirements, and adult supervision.
+
+---
+
+## SECTION D: WHAT THE LLM GETS RIGHT
+
+### D1: Mathematical Accuracy and Completeness
+
+The LLM's mathematical content is consistently accurate and well-organised. In cases where the human teacher gives incomplete or potentially confusing mathematical explanations, the LLM is superior.
+
+- **Pair 2**: The human teacher's extended monologue about circumference, while authentic, is organisationally difficult to follow — it involves repeated pivots, erasing, changing formats, and embedded digressions ("it doesn't always have to be a circle"). The LLM gives a clean presentation with two clearly stated formulae, an example calculation, and explicit instructions.
+- **Pair 56**: The human teacher's explanation of common denominator involves several incomplete sentences and relies heavily on the unresolved "have a common—" at the end. The LLM's explanation of why 1/3 ≠ 3/6 (you need to multiply numerator and denominator by the same value) is mathematically precise.
+- **Pair 59**: Human asks a series of Socratic questions but does not resolve whether the student's original claim was right. LLM calculates that 1/3 = 20 squares, 1/4 = 15 squares, the difference is 5 squares = 1/12, and that 1/3 = 1/4 + 1/12 — a level of mathematical detail the human does not provide.
+
+### D2: Explicit Procedural Scaffolding for Complex Tasks
+
+In centres-based or multi-step activity contexts, the LLM's detailed instructions have genuine value, particularly for students who have missed earlier instruction or for tasks with multiple components.
+
+- **Pair 7**: The LLM provides explicit role differentiation (individual work, then pair work), time structure (5 minutes), and an escalation path (explain the alignment, translate). For a complex multi-strategy multiplication task, these instructions are substantively useful.
+- **Pair 24**: The LLM organises group roles (builder, recorder, checker) and sequences the task clearly. This scaffolding is appropriate to the group-work context.
+
+### D3: Following Up On Student Errors With Reasoning
+
+- **Pair 56**: When student says "three sixths" for 1/3 converted to sixths, the LLM correctly identifies the error and explains it: "you must multiply numerator and denominator by the same number." This is mathematically sound and clearly stated. The human teacher's response, while rich, is not as direct in naming the error.
+
+### D4: Linking to Prior Learning and Generalisation
+
+The LLM consistently links current content to prior content and generalises rules — a practice associated with connected mathematical understanding.
+
+- **Pair 36**: LLM names three contexts where equivalent fractions matter (comparison, adding/subtracting, real life). This is educationally valid.
+- **Pair 6**: LLM correctly notes that a diameter is a special case of a chord — a conceptually important relationship that the human teacher does not foreground.
+
+---
+
+## SECTION E: WHAT THE LLM MISSES
+
+### E1: The Pedagogical Value of Non-Response
+
+The LLM cannot not respond. But the human data shows repeatedly that choosing not to respond to a student is itself a high-level pedagogical decision — driven by pacing, by the presence of other students who need attention, by the desire to let a moment hang, or by the recognition that a redirect serves more than a response. The LLM's inability to simulate a non-response fundamentally distorts any simulation of classroom discourse. Pairs 21, 25, 29, and 35 make this concrete.
+
+### E2: The Micro-Management of Participation Structure
+
+Human teachers are not primarily responding to mathematical content — they are managing *who is thinking* and *when*. The decision to say "Student J?" after a correct answer is a participation management decision, not a mathematical one. The LLM generates questions for named students but without any apparent logic governing why *that* student, *at that moment*. The human's choice of "Student C" or "Student J" is informed by who has not spoken, who looks uncertain, who needs a success, or who needs a challenge. The LLM's student-naming is decorative.
+
+### E3: Reading the Room — Embodied and Contextual Inference
+
+Many human responses presuppose visual and auditory information unavailable in the transcript. "Here you go my friend" (Pair 8) is a physical gesture. "Phone a friend?" (Pair 26) reads a student's affective state. "You're not finished, why are you cleaning up?" (Pair 46) tracks multiple students' physical actions. "Speak up, the microphone needs to pick up your voice" (Pair 5) is triggered by volume, not content. The LLM operates entirely on the text of the student utterance and cannot access any of this — it therefore cannot replicate the decisions that such information drives.
+
+### E4: Calibrated Incompleteness as Instruction
+
+Several human responses are deliberately incomplete — they stop just before the answer, forcing the student to complete the thought. "I have one-half and, right, two-fourths. I did see that. I think there was another one for the halves. I think they had four-eighths when I was looking at people. Does anybody else have that?" (Pair 33). The teacher raises the possibility of a third equivalent fraction without confirming it, keeping students searching. The LLM closes every loop it opens.
+
+### E5: The Distinction Between Classroom Time and Instructional Time
+
+Human teachers manage transitions, equipment, physical space, and time as primary responsibilities. They say "put the lid on that marker" (Pair 30), "fraction bars cleaned up" (Pair 43), and "ring bell" (Pair 43). These are not instructional moves but they are essential classroom moves. The LLM has no concept of the physical classroom as a managed environment with material constraints.
+
+### E6: Spontaneous Amplification of Student Discoveries
+
+Pair 60 is the clearest case: a student spontaneously applies an unmotivated procedure (multiplying numerator and denominator). The human teacher recognises this as a teachable moment requiring particular framing — "he's doing something we haven't mentioned before" — and converts it into a class event. This requires the teacher to recognise what the student has done *in relation to the lesson's trajectory*, to assess its novelty, and to decide that naming it matters more than explaining it. The LLM explains without noticing that anything worth celebrating has occurred.
+
+### E7: Metacognitive and Epistemological Moves
+
+Pair 53 is the clearest example: "You're giving me an example. I don't want an example right now. I want a definition." This teaches students something about mathematical knowledge itself — the distinction between instantiation and definition — not just about equations. The LLM routinely provides definitions but never frames the provision as a lesson about types of mathematical knowledge.
+
+---
+
+## SECTION F: IMPLICATIONS FOR RESEARCH
+
+### F1: LLMs Simulate Teaching as a Monological Activity
+
+The most fundamental finding of this comparison is that the LLM treats teaching as a monologue interrupted by student contributions, whereas human teachers treat it as a polylogue they are orchestrating. The LLM's responses are structurally complete regardless of what the student said. They could, in many cases, have been generated without the student utterance at all. This suggests that using LLM-generated responses to study or simulate teaching will systematically distort our understanding of what teaching *is* — replacing a dialogic, socially-embedded, temporally-sensitive practice with a sequence of instructional texts.
+
+### F2: The Length Problem Confounds Validity Claims
+
+Any study using LLM responses as proxies for teacher responses will face a validity crisis around response length. Human teachers in this dataset respond with a median of approximately 10–15 words; LLMs respond with approximately 100–200 words. This is not a surface difference. Length encodes assumptions about the teacher's role (information-provider vs. orchestrator), the student's role (recipient vs. agent), and the purpose of a classroom exchange (instruction vs. thought-provocation). Research that scores LLM responses as "better" because they are more complete is implicitly endorsing a transmission model of teaching.
+
+### F3: Indirect Matches Are Methodologically Critical
+
+The five indirect-match pairs in this dataset are among the most analytically rich. They show that a teacher's response to student utterance X is sometimes *not a response to X at all* — it is a response to the lesson, the room, the clock, or another student. Any LLM trained to respond to utterances cannot model this, because the non-response to X is precisely what is interesting. Research designs that treat teacher-next-turn as necessarily responsive to student-prior-turn will miss this entirely.
+
+### F4: The LLM's Certainty Is Epistemologically Problematic
+
+Human teachers in this dataset show genuine uncertainty — the test date is unresolved (Pair 23), the teacher is not sure whether the student's equivalent fractions answer is complete (Pair 33), the teacher says "I think there was another one." The LLM presents all information as definitive. In Pair 23, this leads to fabricated test content presented as fact. In research contexts, treating LLM outputs as representative of teacher knowledge or teacher communication will import this false certainty into analytical frameworks.
+
+### F5: What Would a Better LLM Prompt Require?
+
+The system prompt given to this LLM already told it to use various pedagogical moves including redirection. The LLM demonstrably did not do this in a way that matched human behaviour — it redirected *frequently* but without the discriminative judgment about *when* to redirect. This suggests that the gap between LLM and human teacher behaviour is not primarily a prompting problem. It reflects a structural absence: the LLM has no access to the physical, temporal, social, and relational information that drives most human teacher decisions. Research using LLMs to simulate or study teaching should be explicit about this ceiling.
+
+### F6: LLM Responses May Be More Useful as Ideal-Typical Objects Than As Simulations
+
+Where LLM responses most clearly add value in this dataset — mathematical accuracy, procedural clarity, explicit scaffolding — they function as idealised instructional texts rather than as simulations of a real teacher. They resemble well-written worked examples or teaching guides more than classroom talk. Research might productively use LLM outputs as a contrast object: what would a purely content-driven, context-free instructional response look like? Comparing this against human discourse reveals, in sharp relief, how much of real teaching is *not* about delivering content.

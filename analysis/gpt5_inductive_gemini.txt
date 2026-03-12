@@ -1,0 +1,90 @@
+INDUCTIVE QUALITATIVE CODING: GPT-5 Mini vs Human Teachers
+Coder: Gemini 3.1 Pro (thinking_level=high)
+Sample: 60 pairs, stratified by OBSID and word count
+Short=20, Medium=20, Long=20
+Direct matches=56, Indirect matches=4
+Tokens: prompt=19048, output=2025, thinking=5379
+================================================================================
+
+Here is an inductive qualitative analysis of the 60 paired teacher responses, identifying the emergent themes, key differences, and implications of the LLM’s simulated pedagogical discourse.
+
+### SECTION A: EMERGENT THEMES IN HUMAN TEACHER RESPONSES
+
+**1. Scaffolding via Minimal Probing**
+Human teachers consistently use short, open-ended, or fill-in-the-blank questions to force the student to do the cognitive work. They withhold the final answer, acting as a guide rather than a knowledge dispenser.
+*   **Pair 4:** When the student says "At the edge of a circle," the teacher simply prompts the next logical step: "And where does it end?"
+*   **Pair 18:** Instead of confirming the math, the teacher asks for the rationale: "Where did you get 60 from?"
+*   **Pair 58:** The teacher thinks aloud and leaves the final calculation to the student: "So one column of 5 will be 5, two columns, 10. Three columns?"
+
+**2. Authentic Behavioral and Procedural Management**
+Human teachers manage the physical and social realities of the classroom in real-time. Their management is context-dependent, sometimes blunt, and addresses specific physical actions or peer dynamics.
+*   **Pair 5:** "Speak up. The microphone needs to pick up your voice."
+*   **Pair 40:** The teacher addresses a breakdown in peer work directly: "Not even talking to each other. Not saying anything out loud. You're supposed to be using your partner..."
+*   **Pair 46:** "You guys are not finished, why are you cleaning up?"
+
+**3. Spontaneous, Non-Linear Discourse**
+Human teachers speak naturally. Their speech includes pauses, mid-sentence corrections, repetitions, and organic recall of what they have observed in the room.
+*   **Pair 2:** The teacher gives a rambling but highly accessible explanation of perimeter, changes their mind about where students should draw a circle ("Let’s make it even better for you. Turn your paper over."), and thinks aloud.
+*   **Pair 33:** The teacher relies on spontaneous observation: "I think there was another one for the halves. I think they had four-eighths when I was looking at people."
+
+**4. Directing Authentic Peer-to-Peer Interaction**
+Humans frequently deflect their authority, forcing students to address one another or evaluate a peer's claim.
+*   **Pair 6:** "Do you agree with her on that?"
+*   **Pair 39:** "No, you tell him... You're supposed to be telling Student C this."
+
+---
+
+### SECTION B: EMERGENT THEMES IN LLM TEACHER RESPONSES
+
+**1. Hyper-Structuring and Bulleting**
+Regardless of the conversational context, the LLM consistently outputs highly structured, text-dense responses featuring numbered lists, bullet points, and multi-step algorithms. It speaks in lesson plans rather than dialogue.
+*   **Pair 2:** Responds to a one-word student utterance ("Circumference") with two formulas, a specific calculation, and a 3-step numbered list of instructions.
+*   **Pair 21:** Responds to "I think four" with a 3-question group discussion prompt and a 4-bullet-point list of immediate steps.
+*   **Pair 57:** Dumps an overwhelming 6-step numbered list (with sub-bullets) detailing an entire fractional rectangle activity.
+
+**2. Premature Cognitive Resolution (Giving the Answer)**
+The LLM rarely allows for productive struggle. It immediately validates the student and then provides a comprehensive, mathematically perfect explanation, effectively doing the cognitive work *for* the student.
+*   **Pair 17:** The LLM immediately does the math for the student: "Think of it as 30 + 70 = 100... 180 - 105 = 75. So the missing angle is 75 degrees." (The human asked the student how to set up the equation).
+*   **Pair 56:** The LLM explicitly calculates the conversion of fractions to common denominators and provides the final answer (5/6) instead of prompting the student to find the common denominator.
+
+**3. Hallucination of Physical and Curricular Context**
+Because the LLM cannot see the classroom, it invents highly specific numbers, physical materials, and assignments to make its instructions seem concrete.
+*   **Pair 7:** The LLM invents four specific 2-digit multiplication problems (e.g., 46 × 16) and a specific list of strategies.
+*   **Pair 48:** The LLM provides a highly detailed, multi-step safety protocol for building a papier-mâché volcano, taking a student's off-topic comment entirely literally.
+
+**4. Rigid Conversational Template**
+Almost every LLM response follows a predictable, formulaic structure: *Validation ("Yes/Good!") → Full mathematical explanation → Command/Task assignment → Closing question.*
+*   **Pair 1:** "Good question... No — the diameter doesn't..." → Explains diameter → Gives drawing task → Asks "What do you notice?"
+*   **Pair 15:** "Yes — good answer." → Lists all rules of polygons → Asks why a circle is not a polygon.
+
+---
+
+### SECTION C: KEY DIFFERENCES
+
+*   **Pacing and Information Density:** Human teachers take lessons one conversational turn at a time. In **Pair 18**, the human simply asks, "Where did you get 60 from?" to prompt the next step. In contrast, the LLM dumps the entire algebraic equation, the check, and the instructions for the next textbook problem into a single turn. The LLM's cognitive load is overwhelmingly high.
+*   **Scaffolding vs. Explaining:** Humans prompt; the LLM explains. In **Pair 34**, a student asks to use "one-half" again. The human firmly rejects it ("No, do something else... Choose anything") to force the student to generalize the rule. The LLM allows it, does the math for the student (giving 3/6 and 5/10 as examples), and undermines the pedagogical goal of the exercise.
+*   **Classroom Management:** Human management is reactive and grounded in physical reality (**Pair 47**: "needs to finish this or he's going to have to come to study hall"). The LLM relies on sanitized, generic "teacher tropes" that feel entirely unnatural in context (**Pair 41**: "Take three deep breaths with me (inhale, exhale...)").
+
+---
+
+### SECTION D: WHAT THE LLM GETS RIGHT
+
+*   **Mathematical Precision and Clarity:** The LLM is vastly superior at providing crisp, accurate definitions. In **Pair 53**, the human struggles to get a student to define an "equation," whereas the LLM provides a textbook-perfect, easily understandable definition. In **Pair 35**, the LLM provides a flawless, standardized definition of equivalent fractions.
+*   **Explicit Conceptual Connections:** The LLM is excellent at connecting rote tasks to broader mathematical concepts. In **Pair 26**, it explicitly connects skip-counting to repeated addition and arrays. In **Pair 36**, it clearly articulates the real-world utility of equivalent fractions. 
+*   **Unfailing Positivity:** The LLM maintains a highly supportive, encouraging tone, ensuring that student contributions are always validated before being corrected.
+
+---
+
+### SECTION E: WHAT THE LLM MISSES
+
+*   **Productive Struggle and "Wait Time":** The LLM completely misses the pedagogical value of silence and struggle. It does not know how to simply say "Hmm?" or "Why?" and wait for the student to figure it out. By immediately resolving the cognitive tension, it acts as an answer key rather than a teacher.
+*   **The Messiness of Human Discourse:** The LLM speaks like a written curriculum guide. It lacks the natural use of fragments, physical pointing, and spontaneous thought that characterizes real teaching. It cannot say "Look at this one here" because it has no spatial awareness.
+*   **Authentic Peer Mediation:** While the LLM frequently tells students to "turn and talk," it cannot mediate actual live peer interactions. In **Pairs 39 and 40**, the human teacher is actively coaching students on *how* to talk to each other ("You're supposed to be telling Student C this"). The LLM merely recites a list of rules for group work.
+
+---
+
+### SECTION F: IMPLICATIONS FOR RESEARCH
+
+This analysis reveals a fundamental "training data bias" in how LLMs simulate teaching. LLMs appear to be trained heavily on *lesson plans, curriculum guides, and instructional materials* rather than transcripts of actual classroom discourse. Consequently, the LLM outputs the *plan* rather than the *execution*. 
+
+For researchers and teacher educators, this means LLMs are excellent tools for **content simulation** (generating clear explanations, designing activities, or writing definitions) but are currently very poor tools for **pedagogical simulation**. If novice teachers were to study the LLM's discourse, they would learn to over-explain, over-structure, and deprive students of the cognitive struggle necessary for deep learning. Future use of LLMs in educational research must distinguish between an LLM's ability to "know the math" and its ability to "teach the student."

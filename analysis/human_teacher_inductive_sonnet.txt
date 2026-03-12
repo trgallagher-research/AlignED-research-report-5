@@ -1,0 +1,293 @@
+INDUCTIVE QUALITATIVE CODING: Human Teacher Responses
+Coder: Claude Sonnet 4.6 (extended thinking)
+Sample: 60 turns, stratified by OBSID and word count
+Short=20, Medium=20, Long=20
+Direct=56, Indirect=4
+Tokens: input=7556, output=10479
+================================================================================
+
+# Inductive Discourse Analysis: Teacher Responses in Primary/Middle School Mathematics Classrooms
+
+---
+
+## SECTION A: EMERGENT THEMES IN TEACHER DISCOURSE
+
+### Theme 1: Differential Expansion — Response Length Is Not Calibrated to Answer Quality or Length
+
+The most striking and pervasive pattern is the profound mismatch between what a student says and how much the teacher says in return. Response length appears to be driven by the teacher's own curricular agenda at that moment, not by the complexity, correctness, or length of the student contribution.
+
+**Turn 2 (OBSID=173):** A student says a single word — "Circumference" — almost certainly the correct answer to a teacher prompt. The teacher's response runs to approximately 350 words, delivering a complete lecture on perimeter, the formula C=2πr, the symbol for pi, the number 3.14, drawing instructions, note-taking instructions, and a final question. The student's correct one-word contribution is barely acknowledged before being subsumed.
+
+**Turn 11 (OBSID=769):** A student gives an eleven-word mathematically correct and complete answer — "Equals 1,600. Then I did 20 times 4 equals 80" — and receives two words: "You got it." Nothing is built upon, extended, or shared with peers.
+
+**Turn 32 (OBSID=2148):** "192" receives "192, another fraction with extremely small pieces. Okay, the last one, Student A." — minimal uptake, immediate move to the next student.
+
+The implication is that expansion is a *teacher* decision shaped by lesson sequencing, not a response to the student's contribution per se. This challenges the premise that rich student answers produce richer teacher responses.
+
+---
+
+### Theme 2: Echo-Revoicing as Classroom Broadcast
+
+Teachers frequently repeat student answers verbatim or with minor expansion before continuing. This appears to serve multiple simultaneous functions: public validation, acoustic amplification for the class, and time-buying before the teacher's next move.
+
+**Turn 13 (OBSID=907):** Student says "Obtuse." Teacher begins: "Obtuse. So because that is greater than 90 degrees…" — the echo anchors the concept before expanding it.
+
+**Turn 27 (OBSID=2048):** Student says "You times the first number with the second number." Teacher responds: "Okay, you times the first number with the second number, okay. Student C." — exact repetition with no addition, functioning purely as broadcast and transition.
+
+**Turn 28 (OBSID=2048):** Student: "The mode, the range and the median." Teacher: "Mode, range and median. What else have we been working on the first nine weeks?" — echo followed by a pivot question.
+
+What is notable is that the echo does *not* signal teacher endorsement of content quality. In Turn 27 the definition is arguably imprecise ("times the first number with the second number"), yet it receives full echo treatment. The echo is a procedural move, not an evaluative one.
+
+---
+
+### Theme 3: Peer Redirection and Distributed Accountability
+
+Rather than responding to a student answer themselves, teachers repeatedly redirect it to the peer group, constructing knowledge as a collective property rather than a teacher-to-student transmission.
+
+**Turn 6 (OBSID=173):** Student gives a 13-word definition of diameter. Teacher does not evaluate it but asks the class: "Do you agree with her on that?" — outsourcing verification entirely.
+
+**Turn 39 (OBSID=2196):** A student says "That's what I meant" and the teacher responds "No, you tell *him*" — redirecting back to peer communication rather than teacher adjudication.
+
+**Turn 42 (OBSID=2196):** After a student explains a procedure, the teacher asks simply "Am I right?" — a performative reversal that positions the student as the authority and the teacher as seeker of validation.
+
+**Turn 49 (OBSID=4353):** Student says "Multiplication." Rather than confirming or expanding, the teacher says "So can you now read me your four fact families... and I want somebody to be able to repeat what he says" — simultaneously assigning a production task and imposing peer listening accountability.
+
+---
+
+### Theme 4: Off-Task and Non-Mathematical Contributions Are Handled Through Minimal Engagement or Redirection-by-Question
+
+Teachers do not ignore off-task utterances, but they also do not engage with them substantively. A consistent micro-pattern emerges: acknowledge, then redirect, sometimes using a single question that implies "return to task."
+
+**Turn 41 (OBSID=2196):** A student makes a 17-word complaint about the teacher using the wrong name. The teacher responds with a question: "What should we be doing right now?" — no apology, no resolution, a pivot that places the burden of refocus back on the student.
+
+**Turn 47 (OBSID=2221):** Student says "Yes, I'm looking for my pencil. I can't find my pencil." The teacher does not address this student at all and instead says: "Well, if you're finished, Student I needs to finish this or he's going to have to come to study hall." — the student's concern is completely bypassed; a third student is referenced instead.
+
+**Turn 48 (OBSID=2221):** Student makes an off-topic 15-word remark about building a volcano out of a flowerpot. Teacher says: "That's a good idea, isn't it?" — a phrase that acknowledges without engaging, functioning as a social lubricant that closes the detour.
+
+**Turn 23 (OBSID=990):** A student asks about an upcoming test. Notably, *this* off-topic question receives genuine engagement — the teacher explains the situation with the other teacher, then asks the class: "Do you all think you guys are ready for it Friday?" This is the exception that proves the rule: procedural/logistics off-task is treated as legitimate classroom business; purely personal off-task (pencil, name complaint, volcano) is not.
+
+---
+
+### Theme 5: The Example/Definition Tension — A Recurring Instructional Fault Line
+
+Multiple teachers exhibit a specific pattern of rejecting student examples when definitions are sought, but the correction itself is instructionally rich rather than punitive.
+
+**Turn 53 (OBSID=4353):** Student offers "A group of numbers, like 5 plus 5 equals 10." Teacher responds: "You're giving me an example. I don't want an example right now. I want a definition. Think about the example you gave me and how can we say that or write that as a definition for an equation?" — the teacher names the distinction explicitly, uses the student's own example as raw material, and then redistributes the question.
+
+**Turn 35 (OBSID=2148):** An indirect turn where a student defines equivalent fractions as "equivalent, equal." Teacher's response: "Okay, so then they would be equivalent. Let's look at our reference books. Go to the back where the glossary is, and let's just look at [inaudible] definition of what equivalent fractions are." — the answer is treated as insufficient, and the authority outsourced to the glossary rather than the teacher.
+
+**Turn 18 (OBSID=907):** Student gives a plausible but unexplained answer: "The X should be 60 so you get 120 plus 60 equals 180." Teacher asks: "Where did you get 60 from?" — not correcting, not validating, but demanding the derivation. The method is under interrogation, not the answer.
+
+---
+
+### Theme 6: Teacher Appropriation of Student Contributions
+
+A repeated pattern involves students offering a partial or correct contribution which the teacher immediately absorbs into their own extended explanation, effectively ending the student's discursive participation.
+
+**Turn 22 (OBSID=990):** Student says "And these two could." Teacher responds: "Okay, so I am seeing, I'm going to count it by rows, 1, 2, 3, 4, 4 rows, 2 rows are blue, 2 out of 4..." — the teacher takes over the visual demonstration entirely, the student's phrase absorbed without elaboration of *what* the student meant.
+
+**Turn 60 (OBSID=4635):** Student says "I want to move this fraction, so I try to multiply this." Teacher: "Okay. So he actually is doing something we have not mentioned before. What do we call this number?" — the student's self-initiated strategy is publicly elevated, but the teacher immediately wrests control by naming it as an unknown and redirecting to a nomenclature question for the class. The student who did the thinking is not asked to explain it.
+
+**Turn 56 (OBSID=4635):** "Three sixths" triggers a lengthy teacher explanation about common denominators, equivalent fractions, and expansion. The student's two-word answer generates the content of the explanation but disappears from view within two sentences.
+
+---
+
+### Theme 7: Embedded Questions That Are Not Meant to Be Answered
+
+Within long teacher monologues, questions appear that are not pauses for student response — they are rhetorical scaffolding within the teacher's own explanation. These are structurally indistinguishable from genuine questions but serve a different function.
+
+**Turn 2 (OBSID=173):** "…and two halves equals what?" — appears at the end of a 350-word monologue; a student could answer, but the question emerges from a lecture rather than a genuine inquiry pause.
+
+**Turn 17 (OBSID=907):** Within a long explanation, "Now I know that I have X that's missing here, and I just have to take this number, and subtract this number, and I get what X should be." — rhetorical commentary, not a question, embedded in what had started as an answer to a genuine student question.
+
+**Turn 56 (OBSID=4635):** "…3 and 2 have a common what? Not factor. Have a common—" — the teacher interrupts their own question and provides a negative constraint ("not factor"), narrowing the answer space while performing openness.
+
+---
+
+### Theme 8: Praise Is Formulaic and Front-Loaded Before Re-Engagement
+
+When praise appears, it is typically brief, immediately followed by a new demand, and functions more as a transition marker than as substantive evaluative feedback.
+
+**Turn 9 (OBSID=769):** "You've got it. So you have two zeros. Go for it. Very good. What did you do there?" — four micro-moves in one breath: affirmation, restatement, encouragement, interrogation.
+
+**Turn 54 (OBSID=4353):** "Nice job, Student C. Who thinks they can come up and draw me the triangle we talked about for this fact family?" — praise lasts one sentence; the next move is already a call to the class.
+
+**Turn 30 (OBSID=2048):** The most elaborate praise sequence: "Thank you, you did a great job." — but this comes *after* the teacher says "I'm going to be brutally honest here" and *before* contextualising that the student's performance is actually a benchmark problem (multiplication facts should have been mastered in second grade). The praise is genuine but embedded in a critique of systemic expectations.
+
+---
+
+## SECTION B: RESPONSE PATTERNS BY STUDENT UTTERANCE TYPE
+
+### Short Utterances (1–2 Words)
+
+Single-word utterances produce the most *unpredictable* teacher responses in this dataset, disconfirming any assumption of proportionality.
+
+At one extreme, Turn 2 demonstrates that "Circumference" (1 word, correct) generates ~350 words of teacher output. This is the dataset maximum. At the other extreme, Turn 11 shows that "Equals 1,600. Then I did 20 times 4 equals 80" (11 words, complete and correct) receives two words. The single-word correct answer in Turn 2 outperformed by factor of ~175 in terms of teacher words generated.
+
+The more common pattern for 1–2 word correct answers is: echo + classification/explanation + redirect to new student (Turns 13, 14, 31, 32). The echo serves as an acknowledgment, the classification adds curricular content, and the redirect closes the exchange.
+
+**Turn 50 (OBSID=4353)** is uniquely ambiguous: student says "13" and teacher says only "Student C—" and the transcript ends. This appears to be a corrective move through name-calling alone — the teacher signals to the student (and class) that the answer is wrong or insufficient without explicitly saying so. The name becomes a gentle but public marker of a problem.
+
+**Turn 26 (OBSID=2048):** "27" (evidently wrong or uncertain) produces the only *choice-offering* response in the dataset: "Do you want some help? Okay, you want to phone a friend?" — a notably different, affectively softer handling of apparent error. This teacher (OBSID=2048) is uniquely explicit about offering help as a social contract rather than a correction.
+
+For 1-word *inaudible* utterances (Turns 43, 45, 55), teacher responses treat the inaudibility as a minimal acknowledgment opportunity — in Turn 43 the teacher rings a bell and launches homework/transition instructions, essentially discarding the utterance's content entirely and using it only as a timing cue.
+
+### Medium Utterances (3–9 Words)
+
+Medium-length utterances are handled most consistently: they receive echo or partial echo followed by a follow-up question or extension, occasionally redirect to peers. This is the most pedagogically "textbook" response zone.
+
+**Turn 15 (OBSID=907):** "It has to be a closed figure" → "It should be a closed figure. All right. What is the second rule it has to follow, Student S?" — a mild hedge ("should" vs "has to"), then a sequence-advancing question.
+
+**Turn 16 (OBSID=907):** "All the sides are different" → "All the sides are different *lengths*" — the teacher adds one word ("lengths"), which is a precision correction embedded in an echo, and then advances. The precision correction is so subtle it may not register as correction.
+
+**Turn 34 (OBSID=2148):** "Can we still do the half?" — a procedural question about task options — receives one of the longer responses for a medium utterance: "No, do something else... It could be two-thirds. It could be one-third. It could be one-ninth, two-ninths." The teacher's refusal is accompanied by generous alternatives, softening the "no."
+
+**Turn 57 (OBSID=4635):** "Divide the rectangles" (3 words) receives a partial acknowledgment followed by the teacher's own question about "one whole" — the student's answer is used as a launching point but not explicitly validated or questioned.
+
+### Long Utterances (10+ Words)
+
+Long student utterances in this dataset fall into three distinct types, each eliciting qualitatively different responses:
+
+**Type 1 — Genuine Conceptual Questions:** These receive the longest teacher responses. Turn 17 (OBSID=907): 13-word genuine question about how 105 was derived → ~250 words of explanation, worked example, page reference, and a new question for a different student. This is the most direct evidence of a teacher genuinely responding to a student's need.
+
+**Type 2 — Procedural/Correct Contributions:** These often get minimal response (Turn 11: "You got it"; Turn 54: "Nice job") or a challenge to method rather than content (Turn 18: "Where did you get 60 from?").
+
+**Type 3 — Off-Task Long Utterances:** Consistently deflected. Turn 41 (17-word name complaint) → "What should we be doing right now?" Turn 47 (13-word pencil complaint) → teacher ignores speaker entirely. Turn 48 (15-word volcano idea) → "That's a good idea, isn't it?" These three indirect dismissals are structurally identical in function despite surface variation: they close the off-task contribution quickly and return to the instructional frame.
+
+**Turn 29 (OBSID=2048, indirect):** The most interesting long-utterance non-response. Student says "Yeah. I know how to do it, but I don't know how to explain it." This is a metacognitive statement of genuine pedagogical relevance — a student distinguishing procedural competence from conceptual articulation. The teacher's response: "All right, time is up. Now find your elbow." The teacher's next move was already determined; this utterance was indirect and the timing was coincidental. Yet the metacognitive insight goes entirely unaddressed. It is notable as a missed opportunity, but also entirely explicable given the realities of classroom management.
+
+---
+
+## SECTION C: CLASSROOM MANAGEMENT MOVES
+
+### C1: Transition Architecture
+
+Management moves appear not as interruptions to instruction but as interwoven with it. In Turn 43 (OBSID=2221), an inaudible student utterance is immediately followed by a bell ring and a multi-part homework-and-rotation sequence — the student's contribution functions as a cue for a pre-planned transition, not as content.
+
+Turn 46 (OBSID=2221) reveals how a 5-word student question ("Miss C, do we [inaudible]") triggers 90 words of individualized instruction about who specifically may go to rotations, what must be done first, and checking on three named students individually. The management move is not generic — it is named and sequenced.
+
+### C2: Spatial and Physical Directives
+
+Turn 7 (OBSID=769): "Okay. You keep it like that. All right. Do it by yourself. Use two solid strategies, and then consult with each other." — physical positioning ("keep it like that") is folded into a cognitive task instruction.
+
+Turn 5 (OBSID=173): "Speak up. The microphone needs to pick up your voice." — an unusual management move in that it references the recording apparatus explicitly. This is the only instance in the dataset where the research infrastructure visibly intrudes into instruction. The teacher's response deflects from the student's mathematical content entirely.
+
+### C3: Accountability Distribution
+
+Multiple teachers embed a peer accountability structure into their responses: named students must listen to other named students (Turn 49: "I want somebody to be able to repeat what he says"), students must talk to each other rather than to the teacher (Turn 39: "No, you tell *him*"), students must self-certify before transitioning (Turn 46: "Have you simplified into lowest terms? You made sure it was the lowest terms?").
+
+### C4: Ignoring as Deliberate Strategy
+
+Turn 47 is the clearest example: a student's legitimate concern (lost pencil) is not acknowledged even minimally. The teacher's response addresses a *different* student entirely. This is not an oversight — the teacher demonstrates awareness of the situation ("if you're finished, Student I needs to finish this") but simply does not service the first student's need. In a whole-class context, this may be a calculated triage: the pencil problem is unsolvable in the moment, so time is not invested in it.
+
+### C5: Behavioural Re-framing Through Questions
+
+Turn 40 (OBSID=2196) is the most striking management move in the dataset. A student's 8-word description of what another student said is used by the teacher not to respond to its content but to launch a public critique of the class's working practices: "I saw a lot of groups doing this. Writing them down. Not even talking to each other." The individual student's utterance becomes evidence for a collective behavioural intervention. The student is instrumentalised as a proxy for a class-level issue.
+
+---
+
+## SECTION D: VARIATION ACROSS TEACHERS / TRANSCRIPTS
+
+### OBSID 173: Monologic Expansion
+This teacher produces the dataset's most extreme asymmetry. The dominant mode is extended teacher monologue triggered by minimal student input. Turn 2 is the defining example. The teacher appears to use student answers primarily as cues to deliver pre-planned explanations. The follow-up questions (Turn 3: "Would you say they end in opposite places?"; Turn 4: "And where does it end?") are leading and guided — they invite student confirmation of teacher-preferred answers rather than student reasoning. There is a strong sense of scripted lesson delivery being performed.
+
+### OBSID 769: Energised Affirmation with Rapid Pacing
+This teacher uses the highest density of brief affirmations in the dataset — "You've got it," "Very good," "You got it" — and moves quickly between students. The interactions feel like a drill with positive reinforcement. The teacher is managing pacing aggressively (Turn 8: "Who can give me another strategy... Here you go my friend"). This style maximises participation breadth but minimises depth per student.
+
+### OBSID 907: Systematic Name-Calling and Structured Sequence
+This teacher consistently names students before and after responses, creating a structured round-robin feel. The pattern "Answer → Does that make sense? → Student X?" (Turns 13, 14, 15, 16) appears almost mechanically. The notable deviation is Turn 17, where a genuine question breaks the pattern and receives a genuinely long, responsive answer — suggesting the structure is broken when real confusion is detected.
+
+### OBSID 990: The Most Collaborative Register
+This teacher is the only one who treats an off-task question (Turn 23, about the test) as a legitimate class discussion, including asking students for their opinion. The tangram exchanges (Turn 21, 22, 24) show more genuine probing: "Could you experiment by mixing your tangram pieces? Before you actually color?" This teacher appears more comfortable with exploratory, open responses compared to others.
+
+### OBSID 2048: Affective Scaffolding Around Difficulty
+The "phone a friend" move (Turn 26) and the "brutally honest" framing (Turn 30) suggest a teacher managing the emotional register of the classroom around multiplication facts — something the teacher clearly treats as a sensitive topic given that these should have been learned in second grade. This emotional transparency is unique in the dataset.
+
+### OBSID 2148: Fraction Exploration — Most Student-Initiated
+This transcript contains more student-initiated questions and suggestions than others (Turns 33, 34, 36). The teacher's responses consistently extend with "Does anybody else have that?" or by connecting student examples to percentage equivalencies — building a more cumulative discourse than other OBSIDs.
+
+### OBSID 2196: Most Explicitly Behaviour-Focused
+This teacher devotes the largest proportion of response content to behavioural and procedural critique. Turn 40 and Turn 41 both redirect immediately to what students should be doing. Turn 39 ("No, you tell *him*") enforces peer interaction as a non-negotiable. This classroom appears to be in a more active phase of establishing working norms.
+
+### OBSID 2221: Simultaneous Multi-Stream Management
+Turn 46 demonstrates management of at least four named students simultaneously while answering one student's question. This teacher shows the highest visible cognitive load around logistics — the fraction lesson content is secondary to managing a complex transition with multiple students at different stages.
+
+### OBSID 4353: Definitional Precision as a Value
+This teacher is the only one who explicitly names and resists the example/definition conflation (Turn 53). This suggests a specific pedagogical commitment to mathematical language precision that is not as visible in other OBSIDs. Turn 54 also asks a named student to explain their reasoning ("Can you tell us why did you put 30 on the top?") — a metacognitive move not seen in most other transcripts.
+
+### OBSID 4635: Conceptual Building Through Student Contributions
+This teacher most consistently uses student contributions as springboards for introducing new vocabulary and concepts ("common denominator" in Turn 56; unnamed concept in Turn 60: "So he actually is doing something we have not mentioned before"). This is the most visible instance in the dataset of a teacher *following the student's mathematical thinking* rather than using their answer as a cue for a pre-planned explanation.
+
+---
+
+## SECTION E: WHAT IS SURPRISING
+
+### Surprise 1: Correct Answers Are Not Rewarded with Elaboration
+
+The conventional assumption is that a substantively correct, elaborated student answer will receive substantive teacher engagement. This dataset systematically disconfirms it.
+
+Turn 11: An eleven-word, mathematically complete answer ("Equals 1,600. Then I did 20 times 4 equals 80") receives "You got it." Two words. Nothing is built upon it, shared with the class as a model, or probed for understanding.
+
+Turn 30: A student recites four correct multiplication facts for the nines. The teacher's response begins with what seems like praise but quickly pivots to a frank disclosure that this content should have been mastered in second grade — framing the correct performance as remedial rather than advanced.
+
+Turn 32: "192" — apparently correct — receives eight words and an immediate hand-off. Compare with Turn 2 where a single correct word generates 350 words.
+
+### Surprise 2: Incorrect or Incomplete Answers Sometimes Generate Better Teaching
+
+Turn 18: An incorrect or unexplained answer ("The X should be 60") receives "Where did you get 60 from?" — one of the sharper pedagogical moves in the dataset. The error generates active interrogation.
+
+Turn 53: An example offered instead of a definition triggers the most explicit meta-mathematical instruction in the data: the teacher names the category distinction (example vs. definition), uses the student's own example as raw material, and redistributes the question productively.
+
+Turn 17: A student's genuine confusion about a calculation generates ~250 words of explanation, a worked example, and a new problem to practice — far more instructional output than any correct answer in the dataset.
+
+The pattern suggests these teachers may be implicitly more alert when students are wrong or confused than when they are right.
+
+### Surprise 3: Metacognitive Student Utterances Are Not Capitalised Upon
+
+Turn 29 (OBSID=2048): "Yeah. I know how to do it, but I don't know how to explain it." This is arguably one of the most pedagogically significant student utterances in the entire dataset — a clear and accurate description of procedural-conceptual dissociation. It receives no response. The teacher transitions to a pair activity. The indirect turn context explains this partially, but the oversight is notable given the richness of the metacognitive moment.
+
+### Surprise 4: A Student's Name Can Be the Entire Teacher Response
+
+Turn 50 (OBSID=4353): Student says "13." Teacher says "Student C—" and the transcript ends. This minimal response uses naming as the entire corrective mechanism. There is no explicit "no," no explanation of why it is wrong, no hint toward the correct answer. The name alone carries the evaluative weight. This is a surprisingly efficient and face-saving correction strategy — and one entirely absent from most teaching manuals.
+
+### Surprise 5: The Teacher in Turn 23 Defers to the Class on Test Scheduling
+
+Turn 23 (OBSID=990): An off-topic question about a test date leads the teacher to say "I don't know, I mean, do you all think you guys are ready for it Friday?" — asking students to evaluate their own readiness and implying their opinion matters to the scheduling decision. This is a genuine power-sharing move in a domain (assessment scheduling) where teachers conventionally retain authority. It is unique in the dataset.
+
+### Surprise 6: Turn 2's Monologue as a Non-Response
+
+Turn 2 produces 350 words in response to "Circumference." But critically, the student's utterance is not engaged with at all. There is no "yes, correct," no "what does circumference measure?", no use of the fact that the student knew the word. The word simply triggers a pre-prepared explanation. The student could have said *anything* and the same teacher response would likely have followed. This challenges the idea that teacher responses are genuinely *responsive* to students. In this case the discourse is interactive only in the loose sense that a student utterance is the preceding turn — not in any meaningful dialogic sense.
+
+### Surprise 7: Physical Non-Responsiveness Toward the Student Who Is Struggling
+
+Turn 47: The student who cannot find their pencil is the only student in the dataset who receives *zero* engagement — not even a redirect question to themselves. They are effectively erased from the interaction. The teacher continues to a third student (Student I) without closing the loop with the speaker. In a tutoring context this would be a serious failure of responsiveness; in a whole-class context it may be a triage decision, but it remains striking.
+
+---
+
+## SECTION F: IMPLICATIONS
+
+### The Unit of Teaching Is the Class, Not the Student
+
+The most important structural insight from this dataset is that teacher responses are designed for *the room*, not for the individual who spoke. Echo-revoicing (Theme 2) makes sense only when understood as broadcast — the teacher is ensuring the whole class hears an answer, not complimenting the answerer. Peer redirection (Theme 3) makes sense as a mechanism for distributing mathematical authority across a room of 25–30 students, not as a two-person conversational move. Turn 40, where an individual student's utterance becomes a class-level behavioural intervention, crystallises this: the individual is a conduit to the collective.
+
+This is something profoundly difficult to learn from training materials, which overwhelmingly use one-to-one tutoring as the model for "good teaching." The classroom dyad is a fiction. Every teacher response has an audience of thirty.
+
+### The Simultaneity of Management and Instruction
+
+In this dataset there is no clean boundary between "instructional" and "managerial" discourse. Turn 46 contains homework instructions, rotation procedures, individualised check-ins, and fraction vocabulary in consecutive sentences. Turn 7 contains a physical positioning instruction and a mathematical task instruction in the same breath. This is not poor planning — it is the irreducible reality of classroom teaching. The literature on "instructional moves" tends to abstract them from their management context; in practice they are never separable.
+
+### Silence and Minimal Response Are Teaching Moves
+
+The data contains multiple instances where teachers respond minimally — "Yeah?" (Turn 10), "You got it" (Turn 11), a student's name alone (Turn 50) — and these are no less deliberate than long responses. Turn 10's "Yeah?" is genuinely ambiguous: it could be confirmation-seeking, enthusiastic acknowledgment, or a prompt to continue. Its very openness is instructionally significant. Teaching training that focuses exclusively on what teachers *say* misses the deliberate deployment of *not much*.
+
+### The Lesson Plan Constrains Responsiveness
+
+Multiple exchanges (particularly in OBSID 173 and OBSID 4635) suggest that teacher responses are tightly coupled to a pre-planned lesson sequence rather than dynamically responsive to student contributions. Turn 2 is the extreme case: the student's answer is almost irrelevant to what follows. Turn 58 similarly shows a teacher absorbing a student's counting contribution into their own explanation, which was clearly going to happen regardless. Genuine responsiveness to student thinking — visible most clearly in OBSID 4635 Turns 59–60 and OBSID 907 Turn 17 — appears to require a kind of lesson flexibility that is unevenly distributed across these teachers.
+
+### Mathematical Precision Is a Value That Must Be Enforced Against Social Momentum
+
+Turn 53 (OBSID=4353) reveals that a teacher must actively resist the social momentum of an interaction that "feels like it's going well" in order to enforce definitional precision. The student gave an *example* when a *definition* was needed — a completely natural response that almost any listener would accept. The teacher's refusal to accept it, and the explicit naming of the category error, represents a kind of intellectual discipline that is easily eroded under the social pressures of classroom interaction (students trying to please, teachers trying to keep pace). The fact that it appears in only one OBSID in this sample of ten classrooms suggests it may be unusual.
+
+### The Indirect Turn Is an Undertheorised Pedagogical Category
+
+Four turns in this dataset are labelled indirect, and in each case the teacher's response is clearly aimed at the class or a different student. But what is striking is that from the *original student's perspective*, the experience of saying something and watching the teacher respond to someone else is itself a pedagogical event. Turn 21 (OBSID=990): student says "I think four"; teacher speaks to someone else about mixing tangram pieces. Turn 29 (OBSID=2048): a metacognitive disclosure gets a transition instruction. The student's experience of being un-responded-to — whether that is experienced as deliberate teaching, oversight, or erasure — is invisible in transcripts but real in classrooms. The distribution of teacher attention, mediated by timing and classroom positioning, shapes student participation in ways that no transcript can fully capture.

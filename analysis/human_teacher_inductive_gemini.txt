@@ -1,0 +1,97 @@
+INDUCTIVE QUALITATIVE CODING: Human Teacher Responses
+Coder: Gemini 3.1 Pro (thinking_level=high)
+Sample: 60 turns, stratified by OBSID and word count
+Short=20, Medium=20, Long=20
+Direct=56, Indirect=4
+Tokens: prompt=7685, output=2323, thinking=3579
+================================================================================
+
+Based on an inductive analysis of the 60 classroom exchanges, here are the emergent themes and patterns regarding how these teachers interact with their students. 
+
+### SECTION A: EMERGENT THEMES IN TEACHER DISCOURSE
+
+**1. The Teacher as "Amplifier" and "Translator"**
+Teachers rarely accept a correct answer and simply move on. Instead, they use student utterances as raw material to broadcast a broader concept to the whole room, often translating a simple number or word into a formal definition or mathematical model.
+*   *Turn 31:* A student says "Eight." The teacher amplifies: "So we would use this. We would make groups of eight... we would end up having four groups of them."
+*   *Turn 56:* A student says "Three sixths." The teacher translates this into academic vocabulary: "To an equivalent fractions... This is called common denominator. He is using the common denominator."
+*   *Turn 36:* A student gives a complex fraction ("15-twentieths... three-fourths"). The teacher translates this to percentages and real-world concepts: "Three-fourths is almost all of the pie... I think of three-fourths, too, is 75 percent."
+
+**2. The Relentless Push for Justification and Process**
+Teachers consistently respond to statements of fact by demanding the underlying mechanics. They want the "how" and "why" made public.
+*   *Turn 18:* Student provides the correct answer and equation ("The X should be 60..."). The teacher immediately probes: "Where did you get 60 from?"
+*   *Turn 54:* Student correctly lists fact families. The teacher asks them to draw it, then asks: "Can you tell us why did you put 30 on the top...?"
+*   *Turn 24:* Student states a rule ("You have to make a pattern..."). Teacher prompts: "A bigger one, how?"
+
+**3. Metacognitive Modeling (Thinking Aloud)**
+Teachers frequently respond to students by narrating the internal monologue of a mathematician, modeling how a student *should* be thinking.
+*   *Turn 13:* The teacher narrates her physical and mental process: "I look and I say, 'Wow. When I do that, that is less than 90 degrees...'"
+*   *Turn 17:* The teacher explicitly states, "Mathematicians are thinkers all the time," and models her internal logic: "See when I write my X, I kind of make it my little cursive X so you don't mistake it for times..."
+
+**4. Vetoing Valid Math for Pedagogical Utility**
+Teachers sometimes reject mathematically correct student propositions because they do not serve the immediate pedagogical goal.
+*   *Turn 34:* A student asks, "Can we still do the half?" The teacher rejects this valid fraction: "No, do something else... Do something different because it will work with any fraction."
+*   *Turn 53:* A student correctly provides an equation ("5 plus 5 equals 10"). The teacher rejects it because she wants a *definition*, not an example: "You're giving me an example. I don't want an example right now."
+
+### SECTION B: RESPONSE PATTERNS BY STUDENT UTTERANCE TYPE
+
+**Short Utterances (1-2 words): The Teacher Does the Heavy Lifting**
+Counter-intuitively, the shortest student answers often trigger the longest teacher responses. A 1-2 word answer acts as a "green light" for the teacher to launch into a lecture, an expansion, or a multi-step instruction. 
+*   *Turn 2:* S says "Circumference." The teacher responds with a massive ~300-word monologue defining perimeter, circumference, formulas, and giving drawing instructions.
+*   *Turn 17:* S asks a brief question. The teacher responds with a highly detailed, multi-paragraph explanation of algebraic thinking.
+
+**Medium Utterances (3-9 words): The Pivot to Peers or Process**
+When students offer a phrase or a complete thought, teachers frequently use it to pivot to the rest of the class or prompt for the next step.
+*   *Turn 6:* S defines a diameter. Teacher pivots to class: "Do you agree with her on that?"
+*   *Turn 15:* S says "It has to be a closed figure." Teacher validates and pivots: "What is the second rule... Student S?"
+
+**Long Utterances (10+ words): Teacher Truncation and Redirection**
+When students speak at length, teachers often give surprisingly short responses. They use the end of a long student turn to close a sequence, manage behavior, or transition to a new activity.
+*   *Turn 29:* S gives a 16-word explanation of their confusion ("I know how to do it, but I don't know how to explain it"). The teacher completely ignores the content and redirects: "All right, time is up. Now find your elbow."
+*   *Turn 30:* S recites 21 words of multiplication facts. The teacher responds with a management request ("Can you put the lid on that marker..."), validates, and starts a whole new historical context ("In second grade...").
+
+### SECTION C: CLASSROOM MANAGEMENT MOVES
+
+**1. Seamless Interleaving of Math and Management**
+Teachers do not stop teaching to manage; they weave behavioral directives into the middle of mathematical sentences.
+*   *Turn 12:* "Even without the traditional way, what could you do with this number right here? Give me one second please. Just one second. Excuse me. You have 92 times 8."
+*   *Turn 30:* "Okay. Can you put the lid on that marker for me? Student K... you did a great job."
+
+**2. Policing Peer-to-Peer Interaction**
+Teachers actively manage *how* students speak to one another, enforcing collaborative norms over mere task completion.
+*   *Turn 39:* "No, you tell him. The product is 80. You're supposed to be telling Student C this."
+*   *Turn 40:* The teacher critiques the class's interaction style: "Not even talking to each other. Not saying anything out loud. You're supposed to be using your partner..."
+
+**3. Tactical Ignoring of Off-Task Talk and Complaints**
+When students attempt to derail the lesson with complaints or off-topic remarks, teachers use tactical deflection rather than engaging with the content.
+*   *Turn 41:* S complains, "That's not my name... I can't pronounce it." Teacher ignores the interpersonal friction: "What should we be doing right now?"
+*   *Turn 48:* S asks about a volcano in a flowerpot. Teacher gives a non-committal deflection to kill the tangent: "That's a good idea, isn't it?"
+*   *Turn 47:* S complains they can't find their pencil. Teacher ignores them and threatens a different student with study hall.
+
+### SECTION D: VARIATION ACROSS TEACHERS / TRANSCRIPTS
+
+*   **OBSID 173 (The Lecturer):** Highly didactic. Uses student answers as springboards for long, vocabulary-dense monologues (Turns 2, 5). Focuses on formulas and compliance.
+*   **OBSID 907 (The Sense-Maker):** Focuses heavily on mathematical logic and algebraic thinking. Frequently uses the phrase "Does that make sense?" (Turns 14, 16) and explicitly talks about how "mathematicians" think (Turn 17).
+*   **OBSID 2196 (The Collaborator-Enforcer):** Highly focused on the social mechanics of learning. This teacher spends significant discourse time enforcing *how* partners talk to each other (Turns 39, 40).
+*   **OBSID 2221 (The Taskmaster):** Discourse is heavily dominated by procedural checklists, transitions, and conditional statements ("if you are finished..."). The math talk is fragmented by intense behavioral management (Turns 43, 46, 47).
+*   **OBSID 4635 (The Concept Builder):** Focuses on visual models (arrays/rectangles) and pushing students to the edge of their understanding, narrating novel student strategies to the class (Turns 57, 58, 60).
+
+### SECTION E: WHAT IS SURPRISING
+
+**1. The "Callousness" of Momentum**
+Conventional teaching wisdom suggests validating student vulnerability. Yet, when a student admits, "I know how to do it, but I don't know how to explain it" (Turn 29), the teacher brutally cuts them off: "All right, time is up." The drive to maintain pacing and momentum often supersedes individual emotional validation.
+
+**2. The Rejection of "Phone a Friend" as a Lifeline**
+In Turn 26, the teacher says "Okay, you want to phone a friend? Okay." While framed as help, this is actually a public acknowledgement that the student has failed to answer, shifting the cognitive load away rather than scaffolding the student to the right answer. 
+
+**3. Direct Honesty About Teacher Planning**
+In Turn 23, a student asks about a test. Instead of a rigid, authoritative answer, the teacher pulls back the curtain on the co-teaching process: "No, Ms. S, and I were talking... I told her I didn't. She wants to give it Friday. I don't know... do you all think you guys are ready...?" This level of democratic vulnerability regarding lesson planning is highly unusual.
+
+### SECTION F: IMPLICATIONS
+
+This sample reveals that authentic classroom teaching is fundamentally different from one-on-one tutoring or idealized textbook pedagogy. 
+
+First, **the Initiate-Respond-Evaluate (IRE) model is inadequate** to describe this discourse. Teachers rarely just "Evaluate." They *Initiate-Respond-Expand*, *Initiate-Respond-Translate*, or *Initiate-Respond-Redirect*.
+
+Second, **cognitive load for teachers is multi-dimensional**. A teacher is never just evaluating the mathematical correctness of an answer. As seen in Turn 34 (rejecting "one half"), the teacher is evaluating the answer's *pedagogical utility* for future generalization. As seen in Turn 12, they are evaluating math while scanning the room for behavioral compliance. 
+
+Finally, training materials often focus on how to ask good questions, but this data shows that **expert teaching relies heavily on what the teacher does *after* the student answers**. The art of teaching here lies in amplification, translation, and using one student's localized thought to advance the collective understanding of the room.

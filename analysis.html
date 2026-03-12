@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analysis — AlignED Report 5</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="draft-banner">DRAFT — Pre-report results</div>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">AlignED</a>
+      <nav>
+        <a href="index.html">Overview</a>
+        <a href="analysis.html" class="active">Analysis</a>
+        <a href="data.html">Data Browser</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="page-header">
+        <h1>Analysis</h1>
+        <p class="subtitle">Computational discourse analysis and qualitative inductive coding of 1,165 paired responses.</p>
+      </div>
+
+      <!-- Analysis nav -->
+      <div class="analysis-nav">
+        <a href="#discourse" class="analysis-nav-link active" onclick="showSection('discourse', this)">Discourse Analysis</a>
+        <a href="#human-teacher" class="analysis-nav-link" onclick="showSection('human-teacher', this)">Human Teacher Coding</a>
+        <a href="#comparison" class="analysis-nav-link" onclick="showSection('comparison', this)">Human vs LLM Coding</a>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 1: COMPUTATIONAL DISCOURSE ANALYSIS                  -->
+      <!-- ============================================================ -->
+      <div id="discourse" class="analysis-section visible">
+
+        <h2>Computational Discourse Analysis</h2>
+        <p>A keyword-based sentence classifier tags every sentence in both human and LLM responses with a discourse move label (praise, revoice, explanation, question types, etc.), then compares frequencies, opening/closing patterns, and response complexity across all 1,165 paired responses.</p>
+
+        <div class="method-note">
+          <strong>Method:</strong> Each response is split into sentences. Each sentence is classified by keyword matching into one of 15 discourse move categories. No API calls — runs locally in Python.
+        </div>
+
+        <!-- Response length -->
+        <h3>Response length</h3>
+        <p>GPT-5 Mini produces dramatically longer responses than human teachers across every metric.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Mean words</th>
+              <th>Median words</th>
+              <th>Range</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GPT-5 Mini</td>
+              <td>121.2</td>
+              <td>115</td>
+              <td>6–368</td>
+            </tr>
+            <tr>
+              <td>Human teacher</td>
+              <td>31.6</td>
+              <td>17</td>
+              <td>0–463</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>LLM/Human ratio</td>
+              <td>14.7×</td>
+              <td>6.3×</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Response complexity -->
+        <h3>Response complexity</h3>
+        <p>LLM responses contain twice as many discourse moves and use twice as many unique move types per response.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Mean moves</th>
+              <th>Median moves</th>
+              <th>Unique move types</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>GPT-5 Mini</td>
+              <td>8.4</td>
+              <td>7</td>
+              <td>5.0</td>
+            </tr>
+            <tr>
+              <td>Human teacher</td>
+              <td>4.1</td>
+              <td>3</td>
+              <td>2.5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Discourse move frequencies -->
+        <h3>Discourse move frequencies (N=1,165)</h3>
+        <p>The largest differences: LLM over-indexes on extended talk, explanation, and praise. Humans over-index on short utterances ("other"), questions, and brief affirmations.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Move</th>
+              <th>LLM count</th>
+              <th>LLM %</th>
+              <th>Human count</th>
+              <th>Human %</th>
+              <th>Diff</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-highlight">
+              <td>extended_talk</td>
+              <td>2,318</td>
+              <td>23.6%</td>
+              <td>304</td>
+              <td>6.3%</td>
+              <td class="diff-pos">+17.3%</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>other</td>
+              <td>2,723</td>
+              <td>27.7%</td>
+              <td>1,963</td>
+              <td>40.8%</td>
+              <td class="diff-neg">-13.0%</td>
+            </tr>
+            <tr>
+              <td>other_question</td>
+              <td>603</td>
+              <td>6.1%</td>
+              <td>663</td>
+              <td>13.8%</td>
+              <td class="diff-neg">-7.6%</td>
+            </tr>
+            <tr>
+              <td>what_question</td>
+              <td>294</td>
+              <td>3.0%</td>
+              <td>503</td>
+              <td>10.4%</td>
+              <td class="diff-neg">-7.4%</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>explanation</td>
+              <td>1,051</td>
+              <td>10.7%</td>
+              <td>204</td>
+              <td>4.2%</td>
+              <td class="diff-pos">+6.5%</td>
+            </tr>
+            <tr>
+              <td>brief_affirm</td>
+              <td>426</td>
+              <td>4.3%</td>
+              <td>406</td>
+              <td>8.4%</td>
+              <td class="diff-neg">-4.1%</td>
+            </tr>
+            <tr>
+              <td>praise</td>
+              <td>464</td>
+              <td>4.7%</td>
+              <td>86</td>
+              <td>1.8%</td>
+              <td class="diff-pos">+2.9%</td>
+            </tr>
+            <tr>
+              <td>address_class</td>
+              <td>278</td>
+              <td>2.8%</td>
+              <td>8</td>
+              <td>0.2%</td>
+              <td class="diff-pos">+2.7%</td>
+            </tr>
+            <tr>
+              <td>connect_prior</td>
+              <td>301</td>
+              <td>3.1%</td>
+              <td>25</td>
+              <td>0.5%</td>
+              <td class="diff-pos">+2.5%</td>
+            </tr>
+            <tr>
+              <td>yes_no_question</td>
+              <td>211</td>
+              <td>2.1%</td>
+              <td>204</td>
+              <td>4.2%</td>
+              <td>-2.1%</td>
+            </tr>
+            <tr>
+              <td>revoice</td>
+              <td>223</td>
+              <td>2.3%</td>
+              <td>61</td>
+              <td>1.3%</td>
+              <td>+1.0%</td>
+            </tr>
+            <tr>
+              <td>directive</td>
+              <td>453</td>
+              <td>4.6%</td>
+              <td>176</td>
+              <td>3.7%</td>
+              <td>+1.0%</td>
+            </tr>
+            <tr>
+              <td>how_question</td>
+              <td>413</td>
+              <td>4.2%</td>
+              <td>180</td>
+              <td>3.7%</td>
+              <td>+0.5%</td>
+            </tr>
+            <tr>
+              <td>why_question</td>
+              <td>62</td>
+              <td>0.6%</td>
+              <td>34</td>
+              <td>0.7%</td>
+              <td>-0.1%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>Total moves</strong></td>
+              <td><strong>9,821</strong></td>
+              <td></td>
+              <td><strong>4,817</strong></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <!-- Opening moves -->
+        <h3>Opening move patterns</h3>
+        <p>How responses begin reveals the default mode: 57% of LLM responses open with praise or affirmation; humans open with redirects and questions.</p>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Opening move</th>
+              <th>LLM</th>
+              <th>Human</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="row-highlight">
+              <td>praise</td>
+              <td>27%</td>
+              <td>3%</td>
+            </tr>
+            <tr class="row-highlight">
+              <td>brief_affirm</td>
+              <td>30%</td>
+              <td>15%</td>
+            </tr>
+            <tr>
+              <td>other (redirect/content)</td>
+              <td>18%</td>
+              <td>40%</td>
+            </tr>
+            <tr>
+              <td>other_question</td>
+              <td>1%</td>
+              <td>13%</td>
+            </tr>
+            <tr>
+              <td>extended_talk</td>
+              <td>8%</td>
+              <td>3%</td>
+            </tr>
+            <tr>
+              <td>what_question</td>
+              <td>1%</td>
+              <td>9%</td>
+            </tr>
+            <tr>
+              <td>explanation</td>
+              <td>6%</td>
+              <td>4%</td>
+            </tr>
+            <tr>
+              <td>yes_no_question</td>
+              <td>2%</td>
+              <td>4%</td>
+            </tr>
+            <tr>
+              <td>directive</td>
+              <td>3%</td>
+              <td>3%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Non-mathematical turns -->
+        <h3>Non-mathematical student turns</h3>
+        <p>11 student turns were identified as non-mathematical (bathroom requests, personal stories, name corrections). These reveal sharp differences in how humans and LLMs handle off-task talk.</p>
+
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-label">Student says they feel like "a nobody"</div>
+            <div class="example-pair">
+              <div class="response-box human-box">
+                <div class="box-label">Human</div>
+                No, you're not. You're not a nobody in my classroom. Have you tried to make friends? You have? Well, maybe you don't...
+              </div>
+              <div class="response-box llm-box">
+                <div class="box-label">GPT-5 Mini</div>
+                Hey — I'm glad you told me. You are not a nobody. You belong here, and I care about how you're feeling. If you want to t...
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-label">"That's not my name. You called me Student M."</div>
+            <div class="example-pair">
+              <div class="response-box human-box">
+                <div class="box-label">Human</div>
+                What should we be doing right now?
+              </div>
+              <div class="response-box llm-box">
+                <div class="box-label">GPT-5 Mini</div>
+                Okay — eyes up here. Stop what you're doing and listen. Take three deep breaths with me (inhale, exhale, inhale, exhale)...
+              </div>
+            </div>
+          </div>
+
+          <div class="example-card">
+            <div class="example-label">"Can I go to the bathroom?"</div>
+            <div class="example-pair">
+              <div class="response-box human-box">
+                <div class="box-label">Human</div>
+                Go for it, buddy. Let's get done. You good?
+              </div>
+              <div class="response-box llm-box">
+                <div class="box-label">GPT-5 Mini</div>
+                Yes — you may. Take the hall pass and go quickly. Everyone else, keep working on your two strategies; I'll come around t...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 2: HUMAN TEACHER INDUCTIVE CODING                    -->
+      <!-- ============================================================ -->
+      <div id="human-teacher" class="analysis-section">
+
+        <h2>Human Teacher Inductive Coding</h2>
+        <p>Standalone qualitative analysis of how real teachers respond to students, without comparison to any LLM. 60 student-teacher exchanges (6 per transcript, stratified by word count) were sent to two independent coders.</p>
+
+        <div class="method-note">
+          <strong>Method:</strong> Same 60 pairs used in the comparison coding (seed 456). Only the student utterance and human teacher response were sent — no LLM output. Coded independently by Gemini 3.1 Pro (thinking_level=high) and Claude Sonnet 4.6 (extended thinking). Prompt asked for inductive analysis with no pre-defined categories.
+        </div>
+
+        <div class="coder-tabs">
+          <button class="coder-tab active" onclick="showCoder('human-teacher', 'combined', this)">Combined themes</button>
+          <button class="coder-tab" onclick="showCoder('human-teacher', 'gemini', this)">Gemini output</button>
+          <button class="coder-tab" onclick="showCoder('human-teacher', 'sonnet', this)">Sonnet output</button>
+        </div>
+
+        <!-- Combined view -->
+        <div id="human-teacher-combined" class="coder-content visible">
+
+          <h3>Emergent themes</h3>
+
+          <div class="theme-card">
+            <h4>1. Strategic minimalism and deliberate withholding</h4>
+            <p>Teachers frequently respond with a single word, a single question, or a brief acknowledgment, then stop. This keeps cognitive work with the student.</p>
+            <div class="evidence">
+              <p><strong>Turn 10:</strong> Student says "I did 20 times 80." Human says <em>"Yeah?"</em> — a monosyllable that invites continuation without cueing right or wrong.</p>
+              <p><strong>Turn 11:</strong> Student gives two correct partial products. Human says <em>"You got it."</em> Nothing more.</p>
+              <p><strong>Turn 18:</strong> Student gives a correct answer. Human says <em>"Where did you get 60 from?"</em> — the answer is less interesting than its derivation.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>2. Teacher as amplifier and translator</h4>
+            <p>Teachers use student answers as raw material to broadcast concepts to the room, translating simple numbers or words into formal definitions or mathematical models.</p>
+            <div class="evidence">
+              <p><strong>Turn 31:</strong> Student says "Eight." Teacher amplifies: <em>"So we would use this. We would make groups of eight... we would end up having four groups of them."</em></p>
+              <p><strong>Turn 56:</strong> "Three sixths" → teacher translates to <em>"common denominator"</em> vocabulary.</p>
+              <p><strong>Turn 36:</strong> A fraction answer gets translated to percentages: <em>"Three-fourths is almost all of the pie... I think of three-fourths, too, is 75 percent."</em></p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>3. Participation orchestration — managing who speaks, not what is said</h4>
+            <p>Teachers redirect constantly, not to provide content but to distribute cognitive labour across students.</p>
+            <div class="evidence">
+              <p><strong>Turn 13:</strong> After "Obtuse," the teacher does not dwell on it: <em>"What would I call that one, Student C?"</em> — handed off immediately.</p>
+              <p><strong>Turn 39:</strong> <em>"No, you tell him. The product is 80. You're supposed to be telling Student C this."</em> — refuses to be the information relay.</p>
+              <p><strong>Turn 42:</strong> Teacher asks <em>"Am I right?"</em> — a performative reversal positioning the student as the authority.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>4. Vetoing valid maths for pedagogical utility</h4>
+            <p>Teachers sometimes reject mathematically correct answers because they don't serve the learning goal.</p>
+            <div class="evidence">
+              <p><strong>Turn 34:</strong> Student asks "Can we still do the half?" Teacher: <em>"No, do something else... Do something different because it will work with any fraction."</em></p>
+              <p><strong>Turn 53:</strong> Student gives an equation. Teacher: <em>"You're giving me an example. I don't want an example right now. I want a definition."</em></p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>5. Management woven into instruction</h4>
+            <p>Teachers do not pause instruction to manage — they fold management into pedagogical moves seamlessly.</p>
+            <div class="evidence">
+              <p><strong>Turn 12:</strong> <em>"Even without the traditional way, what could you do with this number right here? Give me one second please. Just one second. Excuse me. You have 92 times 8."</em></p>
+              <p><strong>Turn 5:</strong> <em>"Speak up. The microphone needs to pick up your voice."</em> — pure management, no maths engagement.</p>
+              <p><strong>Turn 46:</strong> <em>"You guys are not finished, why are you cleaning up?"</em> — tracking multiple students simultaneously.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>6. Echo-revoicing as classroom broadcast</h4>
+            <p>Teachers repeat student answers verbatim before continuing — serving as acoustic amplification for the room, not evaluation.</p>
+            <div class="evidence">
+              <p><strong>Turn 27:</strong> Student: "You times the first number with the second number." Teacher: <em>"Okay, you times the first number with the second number, okay. Student C."</em> — exact repetition, no addition. The imprecise definition gets full echo treatment.</p>
+              <p><strong>Turn 28:</strong> "The mode, the range and the median" → <em>"Mode, range and median. What else have we been working on?"</em></p>
+            </div>
+          </div>
+
+          <h3>Response patterns by student utterance length</h3>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Student utterance</th>
+                <th>Teacher pattern</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Short (1-2 words)</strong></td>
+                <td>Most unpredictable. Often triggers the <em>longest</em> teacher responses — a single word is a "green light" for a lecture.</td>
+                <td>Turn 2: "Circumference" → ~350 words of explanation</td>
+              </tr>
+              <tr>
+                <td><strong>Medium (3-9 words)</strong></td>
+                <td>Most consistent. Echo + follow-up question or redirect to peers.</td>
+                <td>Turn 6: student defines diameter → "Do you agree with her on that?"</td>
+              </tr>
+              <tr>
+                <td><strong>Long (10+ words)</strong></td>
+                <td>Surprisingly short teacher responses. Truncation, redirection, or transition.</td>
+                <td>Turn 29: 16-word explanation → "All right, time is up. Now find your elbow."</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Variation across teachers</h3>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Transcript</th>
+                <th>Style</th>
+                <th>Defining feature</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>OBSID 173</td>
+                <td>Monologic expansion</td>
+                <td>Long vocabulary-dense monologues triggered by minimal student input</td>
+              </tr>
+              <tr>
+                <td>OBSID 769</td>
+                <td>Energised affirmation</td>
+                <td>High density of brief affirmations, rapid pacing, drill-like</td>
+              </tr>
+              <tr>
+                <td>OBSID 907</td>
+                <td>Systematic sense-making</td>
+                <td>Structured round-robin, "Does that make sense?", algebraic thinking focus</td>
+              </tr>
+              <tr>
+                <td>OBSID 990</td>
+                <td>Most collaborative</td>
+                <td>Treats off-task questions as legitimate; asks students' opinions on test scheduling</td>
+              </tr>
+              <tr>
+                <td>OBSID 2048</td>
+                <td>Affective scaffolding</td>
+                <td>"Phone a friend" move; emotional transparency about difficulty</td>
+              </tr>
+              <tr>
+                <td>OBSID 2148</td>
+                <td>Fraction explorer</td>
+                <td>Most student-initiated questions; connects to percentage equivalencies</td>
+              </tr>
+              <tr>
+                <td>OBSID 2196</td>
+                <td>Collaborator-enforcer</td>
+                <td>Enforces peer-to-peer interaction; "No, you tell <em>him</em>"</td>
+              </tr>
+              <tr>
+                <td>OBSID 2221</td>
+                <td>Multi-stream manager</td>
+                <td>Managing 4+ named students simultaneously; logistics-heavy</td>
+              </tr>
+              <tr>
+                <td>OBSID 4353</td>
+                <td>Definitional precision</td>
+                <td>Only teacher who explicitly names example/definition distinction</td>
+              </tr>
+              <tr>
+                <td>OBSID 4635</td>
+                <td>Concept builder</td>
+                <td>Follows student thinking; narrates novel student strategies to the class</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>What is surprising</h3>
+
+          <div class="theme-card">
+            <h4>Correct answers are not rewarded with elaboration</h4>
+            <p>An eleven-word, mathematically complete answer (Turn 11) receives "You got it." Two words. A single correct word (Turn 2, "Circumference") generates ~350 words. Response length is driven by the teacher's curricular agenda, not the student's contribution.</p>
+          </div>
+
+          <div class="theme-card">
+            <h4>Incorrect answers generate better teaching</h4>
+            <p>Turn 18: an unexplained answer gets "Where did you get 60 from?" — one of the sharpest pedagogical moves in the dataset. Turn 53: an example-for-definition swap triggers the most explicit meta-mathematical instruction. These teachers are more alert when students are wrong.</p>
+          </div>
+
+          <div class="theme-card">
+            <h4>A student's name can be the entire corrective move</h4>
+            <p>Turn 50: student says "13." Teacher says "Student C—" and stops. No "no", no explanation, no hint. The name alone carries the evaluative weight. A surprisingly efficient and face-saving correction absent from teaching manuals.</p>
+          </div>
+
+          <div class="theme-card">
+            <h4>Metacognitive student utterances go unaddressed</h4>
+            <p>Turn 29: "I know how to do it, but I don't know how to explain it" — a clear description of procedural-conceptual dissociation. It receives no response. The teacher transitions to a pair activity. The indirect context explains this partially, but the richness of the metacognitive moment is lost.</p>
+          </div>
+
+          <h3>Implications</h3>
+
+          <div class="implication-list">
+            <div class="implication">
+              <strong>The unit of teaching is the class, not the student.</strong> Echo-revoicing is broadcast. Peer redirection distributes mathematical authority. One student's utterance becomes a class-level behavioural intervention. Every teacher response has an audience of thirty.
+            </div>
+            <div class="implication">
+              <strong>Management and instruction are inseparable.</strong> There is no clean boundary. Turn 46 contains homework instructions, rotation procedures, individualised check-ins, and fraction vocabulary in consecutive sentences.
+            </div>
+            <div class="implication">
+              <strong>Silence and minimal response are teaching moves.</strong> "Yeah?" (Turn 10), "You got it" (Turn 11), a student's name alone (Turn 50) — these are no less deliberate than long responses. Training that focuses on what teachers <em>say</em> misses the deployment of <em>not much</em>.
+            </div>
+            <div class="implication">
+              <strong>The lesson plan constrains responsiveness.</strong> Teacher responses are often tightly coupled to a pre-planned sequence rather than dynamically responsive to student contributions. Genuine responsiveness appears unevenly distributed across teachers.
+            </div>
+          </div>
+        </div>
+
+        <!-- Gemini raw output -->
+        <div id="human-teacher-gemini" class="coder-content">
+          <h3>Gemini 3.1 Pro analysis</h3>
+          <div class="method-note">Tokens: prompt=7,685, output=2,323, thinking=3,579</div>
+          <div class="raw-output" id="gemini-human-output"></div>
+        </div>
+
+        <!-- Sonnet raw output -->
+        <div id="human-teacher-sonnet" class="coder-content">
+          <h3>Claude Sonnet 4.6 analysis</h3>
+          <div class="method-note">Tokens: input=7,556, output=10,479</div>
+          <div class="raw-output" id="sonnet-human-output"></div>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- SECTION 3: HUMAN VS LLM INDUCTIVE CODING                    -->
+      <!-- ============================================================ -->
+      <div id="comparison" class="analysis-section">
+
+        <h2>Human vs LLM Inductive Coding</h2>
+        <p>Qualitative comparison of human teacher and GPT-5 Mini responses to the same student utterances. 60 paired responses coded independently by two LLMs with no pre-defined categories.</p>
+
+        <div class="method-note">
+          <strong>Method:</strong> 60 pairs (seed 456, 6 per OBSID, stratified by word count). Each pair shows student utterance, human teacher response, and GPT-5 Mini response. Coded independently by Gemini 3.1 Pro and Claude Sonnet 4.6. Both received the same prompt asking for inductive analysis.
+        </div>
+
+        <div class="coder-tabs">
+          <button class="coder-tab active" onclick="showCoder('comparison', 'combined', this)">Combined themes</button>
+          <button class="coder-tab" onclick="showCoder('comparison', 'gemini', this)">Gemini output</button>
+          <button class="coder-tab" onclick="showCoder('comparison', 'sonnet', this)">Sonnet output</button>
+        </div>
+
+        <!-- Combined view -->
+        <div id="comparison-combined" class="coder-content visible">
+
+          <h3>What the LLM consistently does that humans do not</h3>
+
+          <div class="theme-card">
+            <h4>1. Completionism — every response is a full teaching episode</h4>
+            <p>The LLM treats each student utterance as a trigger for a complete instructional sequence: acknowledge, explain, extend, task, check. This structure appears regardless of whether it is appropriate.</p>
+            <div class="evidence">
+              <p><strong>Pair 9:</strong> Student says "Add a 0." (3 words). LLM responds with explanation, worked example, and three follow-up questions.</p>
+              <p><strong>Pair 49:</strong> "Multiplication" (1 word) generates ~130 words covering fact-family cards, the next problem, and word problems.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>2. Premature cognitive resolution — giving the answer</h4>
+            <p>The LLM rarely allows productive struggle. It immediately validates then provides a comprehensive explanation, doing the cognitive work for the student.</p>
+            <div class="evidence">
+              <p><strong>Pair 17:</strong> LLM does the maths for the student: "Think of it as 30 + 70 = 100... 180 - 105 = 75." The human asked the student how to set up the equation.</p>
+              <p><strong>Pair 60:</strong> A student spontaneously discovers multiplying numerator and denominator. Human: <em>"He's doing something we haven't mentioned before. What do we call this number?"</em> LLM explains the concept fully, killing the discovery.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>3. Speculative contextual fabrication</h4>
+            <p>The LLM invents classroom details not in evidence — physical materials, specific numbers, test content.</p>
+            <div class="evidence">
+              <p><strong>Pair 2:</strong> "So if your plate measured about 9 inches across (Student R's plate)..." — there is no plate in the transcript.</p>
+              <p><strong>Pair 23:</strong> Student asks if the test is tomorrow. LLM fabricates specific test content. The human reveals the test date is actually uncertain.</p>
+              <p><strong>Pair 7:</strong> LLM invents four specific multiplication problems (46 × 16, 84 × 24, etc.).</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>4. Formulaic praise and rigid template</h4>
+            <p>Almost every LLM response follows: <em>Validation ("Yes/Good!") → Full explanation → Task assignment → Closing question.</em> Praise is structurally formulaic rather than responsive to anything specific the student said.</p>
+            <div class="evidence">
+              <p><strong>Pair 26:</strong> Student says "27" (uncertain). LLM: <em>"Nice job, Student R — thank you."</em> The human teacher offered "phone a friend" — reading the student's uncertainty.</p>
+              <p><strong>Pair 54:</strong> Student recites four facts. LLM: <em>"Yes — exactly, nice work."</em> Human asked <em>why</em> — probing the reasoning behind the correct answer.</p>
+            </div>
+          </div>
+
+          <h3>What humans do that the LLM cannot</h3>
+
+          <div class="theme-card">
+            <h4>1. Strategic minimalism</h4>
+            <p>Humans say "Yeah?" or "Where did you get 60 from?" and stop. The LLM never withholds information.</p>
+          </div>
+
+          <div class="theme-card">
+            <h4>2. Non-response as pedagogy</h4>
+            <p>In indirect matches, the human chose NOT to respond to that student. This is a pedagogical decision driven by pacing, group transitions, or other priorities. The LLM is structurally obligated to generate output.</p>
+            <div class="evidence">
+              <p><strong>Pair 29:</strong> Student: "I know how to do it but I don't know how to explain it." Human: <em>"All right, time is up. Now find your elbow."</em> — the lesson clock takes priority. LLM provides scaffolding for the individual student's difficulty.</p>
+            </div>
+          </div>
+
+          <div class="theme-card">
+            <h4>3. Physical and spatial grounding</h4>
+            <p>"Turn your paper over," "speak up," "put the lid on that marker" — the teacher can see the room. The LLM operates entirely on text.</p>
+          </div>
+
+          <div class="theme-card">
+            <h4>4. Authentic peer mediation</h4>
+            <p>Humans force students to communicate with each other: "No, you tell <em>him</em>." The LLM merely recites rules for group work.</p>
+          </div>
+
+          <h3>What the LLM gets right</h3>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Strength</th>
+                <th>Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mathematical accuracy</td>
+                <td>Consistently precise definitions and well-organised worked examples. In cases where the human gives incomplete explanations, the LLM is superior.</td>
+              </tr>
+              <tr>
+                <td>Explicit scaffolding</td>
+                <td>Detailed step-by-step instructions useful for multi-step tasks — role differentiation, time structure, escalation paths.</td>
+              </tr>
+              <tr>
+                <td>Conceptual connections</td>
+                <td>Consistently links current content to prior learning and generalises rules across contexts.</td>
+              </tr>
+              <tr>
+                <td>Error correction with reasoning</td>
+                <td>When a student makes an error, the LLM correctly identifies it and explains clearly — often more directly than the human.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3>Implications for research</h3>
+
+          <div class="implication-list">
+            <div class="implication">
+              <strong>LLMs simulate teaching as monologue.</strong> The LLM treats teaching as a monologue interrupted by student contributions. Human teachers treat it as a polylogue they are orchestrating. LLM responses could, in many cases, have been generated without the student utterance at all.
+            </div>
+            <div class="implication">
+              <strong>The length problem confounds validity claims.</strong> Human teachers respond with a median of ~17 words; the LLM responds with ~115. This encodes assumptions about the teacher's role (information-provider vs orchestrator). Research that scores LLM responses as "better" because they are more complete is implicitly endorsing a transmission model of teaching.
+            </div>
+            <div class="implication">
+              <strong>The gap is not primarily a prompting problem.</strong> The system prompt already told the LLM it could redirect, address the class, and use various pedagogical moves. It did redirect — but without discriminative judgment about <em>when</em>. The structural absence is access to physical, temporal, social, and relational information.
+            </div>
+            <div class="implication">
+              <strong>LLM responses may be more useful as contrast objects than simulations.</strong> Where they add value — mathematical accuracy, procedural clarity — they function as idealised instructional texts, not classroom talk. Comparing LLM output against human discourse reveals how much of real teaching is <em>not</em> about delivering content.
+            </div>
+          </div>
+
+          <h3>Cross-coder agreement</h3>
+          <p>Both Gemini and Sonnet independently identified the same core themes. The table below maps their labels.</p>
+
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Theme</th>
+                <th>Gemini label</th>
+                <th>Sonnet label</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>LLM over-structuring</td>
+                <td>Hyper-Structuring and Bulleting</td>
+                <td>Completionism — Every Response a Full Teaching Episode</td>
+              </tr>
+              <tr>
+                <td>LLM gives the answer</td>
+                <td>Premature Cognitive Resolution</td>
+                <td>Probing vs Resolving</td>
+              </tr>
+              <tr>
+                <td>LLM fabricates context</td>
+                <td>Hallucination of Physical and Curricular Context</td>
+                <td>Speculative Contextual Fabrication</td>
+              </tr>
+              <tr>
+                <td>Formulaic LLM praise</td>
+                <td>Rigid Conversational Template</td>
+                <td>Affect Without Authenticity</td>
+              </tr>
+              <tr>
+                <td>Human strategic brevity</td>
+                <td>Scaffolding via Minimal Probing</td>
+                <td>Strategic Minimalism — Deliberate Withholding</td>
+              </tr>
+              <tr>
+                <td>Human peer orchestration</td>
+                <td>Directing Authentic Peer-to-Peer Interaction</td>
+                <td>Participation Management as Orchestral Function</td>
+              </tr>
+              <tr>
+                <td>Human classroom management</td>
+                <td>Authentic Behavioral and Procedural Management</td>
+                <td>Classroom Management Woven Into Instruction</td>
+              </tr>
+              <tr>
+                <td>Non-response as pedagogy</td>
+                <td><em>(not explicitly identified)</em></td>
+                <td>The Pedagogical Value of Non-Response</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Gemini raw output -->
+        <div id="comparison-gemini" class="coder-content">
+          <h3>Gemini 3.1 Pro analysis</h3>
+          <div class="method-note">Tokens: prompt=19,048, output=2,025, thinking=5,379</div>
+          <div class="raw-output" id="gemini-comparison-output"></div>
+        </div>
+
+        <!-- Sonnet raw output -->
+        <div id="comparison-sonnet" class="coder-content">
+          <h3>Claude Sonnet 4.6 analysis</h3>
+          <div class="method-note">Tokens: input=19,528, output=9,414</div>
+          <div class="raw-output" id="sonnet-comparison-output"></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><a href="https://trgallagher-research.github.io/AlignED-research-reports/">AlignED</a> — Benchmarking AI models for educational practice.</p>
+      <p>&copy; 2026 Tim Gallagher</p>
+    </div>
+  </footer>
+
+  <script>
+    /* Section switching (Discourse / Human Teacher / Comparison) */
+    function showSection(sectionId, link) {
+      // Hide all sections
+      document.querySelectorAll('.analysis-section').forEach(function(s) {
+        s.classList.remove('visible');
+      });
+      // Deactivate all nav links
+      document.querySelectorAll('.analysis-nav-link').forEach(function(a) {
+        a.classList.remove('active');
+      });
+      // Show selected section
+      document.getElementById(sectionId).classList.add('visible');
+      link.classList.add('active');
+    }
+
+    /* Coder tab switching (Combined / Gemini / Sonnet) */
+    function showCoder(section, coder, button) {
+      // Hide all coder content in this section
+      var parent = document.getElementById(section);
+      parent.querySelectorAll('.coder-content').forEach(function(c) {
+        c.classList.remove('visible');
+      });
+      // Deactivate all tabs in this section
+      parent.querySelectorAll('.coder-tab').forEach(function(t) {
+        t.classList.remove('active');
+      });
+      // Show selected coder content
+      document.getElementById(section + '-' + coder).classList.add('visible');
+      button.classList.add('active');
+    }
+
+    /* Load raw analysis outputs for Gemini/Sonnet tabs */
+    function loadRawOutputs() {
+      var files = [
+        { url: 'analysis/human_teacher_inductive_gemini.txt', elementId: 'gemini-human-output' },
+        { url: 'analysis/human_teacher_inductive_sonnet.txt', elementId: 'sonnet-human-output' },
+        { url: 'analysis/gpt5_inductive_gemini.txt', elementId: 'gemini-comparison-output' },
+        { url: 'analysis/gpt5_inductive_sonnet.txt', elementId: 'sonnet-comparison-output' }
+      ];
+
+      files.forEach(function(f) {
+        fetch(f.url)
+          .then(function(r) { return r.text(); })
+          .then(function(text) {
+            // Strip the header lines (first 7 lines with metadata)
+            var lines = text.split('\n');
+            var startIdx = 0;
+            for (var i = 0; i < lines.length; i++) {
+              if (lines[i].match(/^={10,}/)) {
+                startIdx = i + 1;
+                break;
+              }
+            }
+            var content = lines.slice(startIdx).join('\n').trim();
+            document.getElementById(f.elementId).textContent = content;
+          })
+          .catch(function(err) {
+            document.getElementById(f.elementId).textContent = 'Error loading file: ' + err.message;
+          });
+      });
+    }
+
+    loadRawOutputs();
+  </script>
+</body>
+</html>
